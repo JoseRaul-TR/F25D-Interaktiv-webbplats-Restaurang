@@ -5,35 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/navbar-footer-styles.css">
 
-    <script src="./script.js" defer></script>
-    <title>"Restaurang Namn"</title>
+    <script src="./scripts/script.js" defer></script>
+    <script src="./scripts/navbar-script.js" defer></script>
+    <title>Ñam-Ñam Restaurang</title>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#hem">Hem</a></li>
-                <li><a href="#meny">Meny</a></li>
-                <li><a href="#lunchbuffe">Lunchbuffe</a></li>
-                <li><a href="#priser">Priser</a></li>
+<!-- Adaptar JS al nuevo nav-->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <a href="./index.html">
+                    <h1>Ñam-Ñam Restaurang</h1> <!-- Place for restaurant's logo -->
+                </a>
+            </div>
+            <ul class="navbar-list">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Hem</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html/#meny" class="nav-link">Meny</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html/#lunchbuffe" class="nav-link">Lunchbuffé</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/order.html" class="nav-link">Beställning</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact.html" class="nav-link">Kontakt</a>
+                </li>
+                <a href="javascript:void(0);" class="icon" onclick="contractNavbar()">&#9776;</a>
             </ul>
         </nav>
+        <button class="hamburger">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
     </header>
+
+
+
     
     <main>
-        <section id="hem">
+
+        <section id="home">
 
         </section>
-        <section id="meny">
+        <section id="menu">
 
         </section>
         <section id="lucnbuffe">
 
         </section>
-        <section id="priser">
-            
-        </section>
+
     </main>
 </body>
 </html>
