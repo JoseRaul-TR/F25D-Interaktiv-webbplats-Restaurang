@@ -1,4 +1,4 @@
-* {
+ * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -8,7 +8,7 @@ body {
     font-family: sans-serif;
 }
 
-nav ul {
+/*nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -22,12 +22,12 @@ nav li {
 
 section {
     padding: 20px;
-}
+} */
 
 /* Responsiv design */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
         align-items: center;
     }
-}
+} */

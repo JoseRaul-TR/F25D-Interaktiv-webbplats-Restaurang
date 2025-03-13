@@ -1,7 +1,7 @@
 /* Adapt to a new layout */
 
 /* Stored variables */
-:root {
+/* :root {
   --primary-color: #007bff;
   --secondary-color: #0056b3;
   --light-gray: #f0f0f0;
@@ -109,13 +109,13 @@ footer p {
 
 .social-icons a:visited i {
   color: inherit;
-}
+} */
 
 /* –––––––––––––––––––––––––––––––––––––––––––––– */
 
 /* Responsive Adjustments */
 /* Styles for small screens */
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
   .navbar a {
     font-size: 1rem;
     padding: 0.5rem 0.8rem;
@@ -141,7 +141,7 @@ footer p {
     display: block;
     text-align: left;
   }
-}
+} */
 
 /* End Responsive Adjustments */
 
@@ -149,17 +149,17 @@ footer p {
 
 /* Print Responsive Adjustments */
 
-@media print {
+/* @media print {
   .navbar ,
   footer {
     display: none;
   }
-}
+} */
 
 /* ––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /* Dark Mode */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   header,
   .navbar {
     background-color: var(--dark-blur-background);
@@ -196,5 +196,68 @@ footer p {
   .social-icons a:visited i {
       color: inherit; 
   }
-}
+} */
 /* End Dark Mode */
+
+/* ––––––––––––––––––––––––––––––––––– */
+
+/* Intento de cero */
+
+.header {
+  text-align: center;
+  width: 100vw;
+}
+
+.logo-container h1{
+  width: 100%;
+  text-align: center;
+  padding: 1em;
+}
+
+.nav-list {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly; 
+  list-style: none;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 1rem 0;
+}
+
+.nav-item {
+  padding: 0 1rem;
+  border-right: 1px solid #000;
+} /* –> Seguir trabajando en navbar cuadricula <– */
+
+.nav-link {
+  text-decoration: none;
+  color: #333; /* Example color */
+  display: flex; /* Allow icon and text to align */
+  align-items: center; /* Vertically align icon and text */
+}
+
+.nav-link i {
+  margin-right: 5px; /* Space between icon and text */
+}
+
+.hamburger {
+  display: none; /* Hide by default */
+  /* Add styling for hamburger button here */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .nav-list {
+      display: none; /* Hide navigation list on small screens */
+  }
+
+  .hamburger {
+      display: block; /* Show hamburger button on small screens */
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      cursor: pointer;
+  }
+}
