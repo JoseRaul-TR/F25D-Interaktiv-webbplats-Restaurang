@@ -4,36 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/navbar-footer-styles.css">
 
     <script src="./scripts/script.js" defer></script>
     <script src="./scripts/navbar-script.js" defer></script>
-    <title>"Restaurang Namn | Beställning"</title>
+    <title>Ñam-Ñam Restaurang</title>
 </head>
+
 <body>
-    <header>
-        
-        <div class="title">
-            <h1>Ñam-Ñam Restaurang</h1>
+<!-- Adaptar JS al nuevo nav-->
+    <header class="header">
+        <div class="logo-container">
+            <a href="./index.html">
+                <h1>Ñam-Ñam Restaurang</h1> <!-- Place for restaurant's logo -->
+            </a>
         </div>
-        
-        <nav class="navbar" id="myNavbar">
-            <ul>
-                <li><a href="./index.html" id="homeLink">Hem</a></li>
-                <li><a href="#meny" id="menuLink">Meny</a></li>
-                <li><a href="#lunchbuffe" id="lunchbuffeLink">Lunchbuffe</a></li>
-                <li><a href="./order.html"id="orderLink">Beställning</a></li>
-                <li><a href="./contact.html" id="contactLink">Kontakt</a></li>
-                <a href="javascript:void(0);" class="icon" onclick="contractNavbar()">&#9776;</a>
+        <nav class="nav"></nav>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">
+                        <i class="fas fa-home"></i> Hem
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/menu.html" class="nav-link">
+                        <i class="fas fa-book-open"></i> Meny
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/lunchbuffe.html" class="nav-link">
+                        <i class="fas fa-concierge-bell"></i> Lunchbuffé
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/order.html" class="nav-link">
+                        <i class="fas fa-truck"></i> Beställning
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact.html" class="nav-link">
+                        <i class="fas fa-envelope"></i> Kontakt
+                    </a>
+                </li>
             </ul>
         </nav>
+        <button class="hamburger">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
     </header>
     
     <main>
-
 
     </main>
 </body>

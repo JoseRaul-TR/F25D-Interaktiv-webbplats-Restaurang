@@ -1,70 +1,67 @@
-const currentPage = window.location.pathname;
+/* document.addEventListener('DOMContentLoaded', function() {
+    // Navigation functionality
 
-// Get the nav links
-const homeLink = document.getElementById("homeLink");
-const menuLink = document.getElementById("menuLink");
-const lunchbuffeLink = document.getElementById("lunchbuffeLink");
-const orderLink = document.getElementById("orderLink");
-const contactLink = document.getElementById("contactLink");
+    // 1. Highlight Active Link
+    const navLinks = document.querySelectorAll('.nav-link');
+    const currentPath = window.location.pathname;
 
-// Function to set the active class
-function setActiveLink(link) {
-    if (homeLink) homeLink.classList.remove("active");
-    if (menuLink) menuLink.classList.remove("active");
-    if (lunchbuffeLink) lunchbuffeLink.classList.remove("active");
-    if (orderLink) orderLink.classList.remove("active");
-    if (contactLink) contactLink.classList.remove("active");
-    if (link) link.classList.add("active");
-}
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+            link.classList.add('current');
+        } else if (currentPath === '/' && link.getAttribute('href') === '/index.html') {
+            link.classList.add('current');
+        } else {
+            link.classList.remove('current');
+        }
+    });
 
-// Check the current page and set the active link
-if (currentPage.endsWith("index.html") || currentPage === "/") {
-    setActiveLink(homeLink);
-} else if (currentPage.endsWith("#meny")) {
-    setActiveLink(menuLink);
-} else if (currentPage.endsWith("#lunchbuffe")) {
-    setActiveLink(lunchbuffeLink);
-} else if (currentPage.endsWith("order.html")) {
-    setActiveLink(orderLink);
-} else if (currentPage.endsWith("contact.html")) {
-    setActiveLink(contactLink);
-}
+    // 2. Hamburger Menu Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navList = document.querySelector('.nav-list');
+    const hamburgerLines = document.querySelectorAll('.hamburger-line');
 
-// Show the correct section based on the current page
-const homeSection = document.getElementById("home");
-const menuSection = document.getElementById("menu");
-const lunchbuffeSection = document.getElementById("lucnbuffe"); // corrected Id.
-const orderSection = document.getElementById("order"); // if you add this to the html.
-const contactSection = document.getElementById("contact");
+    if (hamburger && navList) {
+        hamburger.addEventListener('click', function() {
+            navList.classList.toggle('nav-active'); //Toggle a class for active state
+            hamburger.classList.toggle('hamburger-active'); //Toggle a class for active state
 
-function showSection(section) {
-    if (homeSection) homeSection.style.display = "none";
-    if (menuSection) menuSection.style.display = "none";
-    if (lunchbuffeSection) lunchbuffeSection.style.display = "none";
-    if (orderSection) orderSection.style.display = "none";
-    if (contactSection) contactSection.style.display = "none";
-    if (section) section.style.display = "block";
-}
+            if (navList.classList.contains('nav-active')) {
+                hamburgerLines[0].style.transform = 'rotate(45deg) translate(7px, 7px)';
+                hamburgerLines[1].style.opacity = '0';
+                hamburgerLines[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+                setTimeout(() => { navList.style.display = 'flex'; }, 300);
+            } else {
+                hamburgerLines[0].style.transform = 'rotate(0) translate(0, 0)';
+                hamburgerLines[1].style.opacity = '1';
+                hamburgerLines[2].style.transform = 'rotate(0) translate(0, 0)';
+                navList.style.display = 'none';
+            }
+        });
 
-if (currentPage.endsWith("index.html") || currentPage === "/") {
-    if (homeSection) showSection(homeSection);
-} else if (currentPage.endsWith("#meny")) {
-    if (menuSection) showSection(menuSection);
-} else if (currentPage.endsWith("#lunchbuffe")) {
-    if (lunchbuffeSection) showSection(lunchbuffeSection);
-} else if (currentPage.endsWith("order.html")) {
-    if (orderSection) showSection(orderSection);
-} else if (currentPage.endsWith("contact.html")) {
-    if (contactSection) showSection(contactSection);
-}
+        // 3. Hide nav list on wider screens
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) { // Adjustable breakpoint
+                navList.classList.remove('nav-active');
+                navList.style.display = 'flex';
+                hamburgerLines[0].style.transform = 'rotate(0) translate(0, 0)';
+                hamburgerLines[1].style.opacity = '1';
+                hamburgerLines[2].style.transform = 'rotate(0) translate(0, 0)';
+                hamburger.classList.remove('hamburger-active');
+                hamburger.style.display = 'none';
+            } else {
+                hamburger.style.display = 'block';
+                if(!hamburger.classList.contains('hamburger-active')){
+                    navList.style.display = 'none';
+                }
+            }
+        });
 
-// Responsive navbar
-/* Toggle between adding and removing the "responsive" class to the navbar when the user clicks on the icon */
-function contractNavbar() {
-    var x = document.getElementById("myNavbar");
-    if (x.className === "navbar") {
-        x.className += " responsive";
-    } else {
-        x.className = "navbar";
+        // 4. Initial hide on load if screen is small
+        if (window.innerWidth <= 768) {
+            navList.style.display = 'none';
+            hamburger.style.display = 'block';
+        } else {
+            hamburger.style.display = 'none';
+        }
     }
-}
+}); */
