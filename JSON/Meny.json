@@ -1,0 +1,276 @@
+{
+    "menu": {
+        "För att smaka på": [
+            {
+            "namn": "Mulle-rom, mojama (tonfisk) från almadraba och Marcona-mandlar",
+            "beskrivning": "Nötter/Fisk",
+            "pris": "46"
+            },
+            {
+            "namn": "Kantabriskta äktenskap med oliver",
+            "beskrivning": "Fisk",
+            "pris": "32"
+            },
+            {
+            "namn": "Murciansk marinera med ansjovis från Kantabriska sjön",
+            "beskrivning": "Gluten/Fisk/Ägg",
+            "pris": "35"
+            },
+            {
+            "namn": "Iberisk skinka",
+            "beskrivning": "",
+            "pris": "276"
+            },
+            {
+            "namn": "Urval av iberiska charkuterier och fårost",
+            "beskrivning": "Mjölk",
+            "pris": "207"
+            },
+            {
+            "namn": "Parmesanbitar med \"regañinas\" (kex)",
+            "beskrivning": "Nötter/Mjölk",
+            "pris": "173"
+            }
+        ],
+        "För att smaka på (varmt)": [
+            {
+            "namn": "\"Caballito\" med sammet av citron (friterad räka) – pris per stycke",
+            "beskrivning": "Kräftdjur/Gluten",
+            "pris": "32 kr/st"
+            },
+            {
+            "namn": "Bläckfisk från klipporna med paprikapulver och krossad potatis",
+            "beskrivning": "Blötdjur",
+            "pris": "242"
+            },
+            {
+            "namn": "Musslor sauterade med pinjenötter och vitlök",
+            "beskrivning": "Blötdjur/Nötter",
+            "pris": "253"
+            },
+            {
+            "namn": "Bläckfisk från bukten på andalusiskt vis med Padrón-paprika",
+            "beskrivning": "Blötdjur",
+            "pris": "213"
+            },
+            {
+            "namn": "Kroketter på iberisk skinka med rödvinssirap – pris per stycke",
+            "beskrivning": "Gluten/Mjölk/Ägg/Sulfiter",
+            "pris": "31"
+            },
+            {
+            "namn": "Spenatkroketter med hallonsylt – pris per stycke",
+            "beskrivning": "Mjölk/Ägg/Nötter/Gluten",
+            "pris": "29"
+            },
+            {
+            "namn": "Torskfiskbulle med en touch av aioli – pris per stycke",
+            "beskrivning": "Mjölk/Fisk/Gluten",
+            "pris": "41"
+            },
+            {
+            "namn": "\"Asas\"-potatis med vitlök /6st",
+            "beskrivning": "Mjölk",
+            "pris": "92"
+            }
+        ],
+        "Från vår trädgård": [
+            {
+            "namn": "Ljumna sallad med vedugnsrostade grönsaker, olivolja och vitlök",
+            "beskrivning": "",
+            "pris": "161"
+            },
+            {
+            "namn": "Delad tomat med piparras (spansk peppar) och tonfisk",
+            "beskrivning": "Fisk",
+            "pris": "178.25"
+            },
+            {
+            "namn": "Vår special sallad",
+            "beskrivning": "Fisk/Ägg",
+            "pris": "172.50"
+            },
+            {
+            "namn": "Sallad med sommarfrukter, olja, pinjenötter och mangosirap",
+            "beskrivning": "Nötter/Mjölk",
+            "pris": "184"
+            },
+            {
+            "namn": "Avokadosallad med ansjovis och parmesanflingor",
+            "beskrivning": "Fisk/Mjölk",
+            "pris": "187.45"
+            },
+            {
+            "namn": "Traditionell gazpacho på en isbädd",
+            "pris": "63.25"
+            }
+        ],
+        "Från gården": [
+            {
+            "namn": "Murciansk \"zarangollo\" (ägg med grönsaker)",
+            "beskrivning": "Ägg",
+            "pris": "138"
+            },
+            {
+            "namn": "Traditionell pisto (spansk ratatouille) med stekta ägg",
+            "beskrivning": "Ägg",
+            "pris": "138"
+            },
+            {
+            "namn": "Röra på gyllene torsk med sparris och vitlök",
+            "beskrivning": "Ägg/Fisk",
+            "pris": "187.45"
+            },
+            {
+            "namn": "Gårdsägg med iberisk skinka",
+            "beskrivning": "Ägg",
+            "pris": "172.50"
+            }
+        ],
+        "Från kusten": [
+            {
+            "namn": "Torskbit med aioli och kaviarolja",
+            "beskrivning": "Fisk/Mjölk",
+            "pris": "207"
+            },
+            {
+            "namn": "Sankt Petersfisk stekt i panna med färsk vitlök",
+            "beskrivning": "Fisk",
+            "pris": "287.50"
+            },
+            {
+            "namn": "Kummelbit med saffransås och laxpärlor",
+            "beskrivning": "Fisk/Gluten",
+            "pris": "253"
+            },
+            {
+            "namn": "Piggvar med macadamianötter och Verdejo-vin",
+            "beskrivning": "Fisk/Nötter/Kräftdjur",
+            "pris": "299"
+            },
+            {
+            "namn": "*Fråga om dagens fisk, tillagad efter kockens önskemål",
+            "beskrivning": "",
+            "pris": ""
+            }
+        ],
+        "Från vår vedeldade grill": [
+            {
+            "namn": "Ris med lantkyckling – pris per person",
+            "beskrivning": "",
+            "pris": "172.50"
+            },
+            {
+            "namn": "Ris med kanin och sniglar – pris per person",
+            "beskrivning": "",
+            "pris": "195.50"
+            },
+            {
+            "namn": "Ris med grönsaker – pris per person",
+            "beskrivning": "",
+            "pris": "172.50"
+            },
+            {
+            "namn": "\"Arroz a banda\" (ris med skaldjur och fisk vid sidan) – pris per person",
+            "beskrivning": "Kräftdjur/Fisk",
+            "pris": "207"
+            },
+            {
+            "namn": "Ris med magert kött och revben – pris per person",
+            "beskrivning": "",
+            "pris": "172.50"
+            }
+        ],
+        "Kött": [
+            {
+            "namn": "Killing med vitlökssås",
+            "beskrivning": "Sulfiter",
+            "pris": "207"
+            },
+            {
+            "namn": "Oxfilé med gåslever och Pedro Ximénez-vin",
+            "beskrivning": "Gluten/Nötter/Sulfiter",
+            "pris": "333.50"
+            }
+        ],
+        "Från vår kolgrill": [
+            {
+            "namn": "Skivor av iberisk \"secreto\" (fläsk) med småpotatis och paprika",
+            "beskrivning": "",
+            "pris": "230"
+            }, 
+            {
+                "namn": "Lamm från grillen med småpotatis och paprika",
+                "beskrivning": "",
+                "pris": "207"
+            }, 
+            {
+                "namn": "Chuletón (kotlett) av Murciansk \"Chato\"-gris med grillad potatis och piquillo-paprika",
+                "beskrivning": "",
+                "pris": "253"
+            },
+            {
+                "namn": "Entrecote av nöt med småpotatis och paprika",
+                "beskrivning": "",
+                "pris": "276"
+            },
+            {
+                "namn": "Varierad köttgrill med Padrón-paprika och \"a lo pobre\"-potatis (minst 2 personer, pris per person)",
+                "beskrivning": "",
+                "pris": "172.50"
+            }
+        ],
+        "Dessert": [
+            {
+                "namn": "Friterad mjölk, \"paparajote\" (citronblad med deg) och nougatglass",
+                "beskrivning": "Mjölk/Gluten/Nötter/Sulfiter/Ägg",
+                "pris": "80.50"
+            },
+            {
+                "namn": "Pärlmiljö med Bullas D.O.-vin och vit chokladkräm",
+                "beskrivning": "Laktos/Gluten/Sulfiter",
+                "pris": "92"
+            },
+            {
+                "namn": "\"Asiático\"-tiramisu (kaffedrink)",
+                "beskrivning": "Laktos/Gluten/Ägg/Sulfiter",
+                "pris": "74.75"
+            },
+            {
+                "namn": "Farmors tårta",
+                "beskrivning": "Gluten/Ägg/Sulfiter/Laktos",
+                "pris": "69"
+            },
+            {
+                "namn": "Urval av säsongens frukter",
+                "beskrivning": "",
+                "pris": "69"
+            },
+            {
+                "namn": "Risgrynsgröt",
+                "beskrivning": "Laktos",
+                "pris": "69"
+            },
+            {
+                "namn": "Chokoladbrownie med engelsk vaniljsås",
+                "beskrivning": "Ägg/Laktos/Nötter/Gluten",
+                "pris": "74.75"
+            },
+            {
+                "namn": "\"Paparajote\"-blad (citronblad med deg)",
+                "beskrivning": "Ägg/Laktos/Gluten",
+                "pris": "21.85"
+            },
+            {
+                "namn": "Vårt traditionella \"pan de calatrava\" (brödpudding)",
+                "beskrivning": "Laktos/Gluten/Ägg",
+                "pris": "69"
+            },
+            {
+                "namn": "\"Natillas de la huerta\" (vaniljkräm)",
+                "beskrivning": "Laktos/Sulfiter/Gluten",
+                "pris": "63.25"
+            }
+        ]
+    }
+}

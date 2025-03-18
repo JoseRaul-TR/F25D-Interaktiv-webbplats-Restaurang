@@ -93,8 +93,8 @@
 footer {
   background-color: transparent;
   backdrop-filter: blur(10px);
+  margin-top: 1em;
   padding: 1em;
-  position: fixed;
   bottom: 0;
   width: 100%;
   z-index: 100;
@@ -205,6 +205,12 @@ color: #ffc400;
     width: 100%;
     transform: translateY(0); /* Bring menu into view */
     opacity: 1; /* Make menu visible */
+    position: sticky;
+    top: 0;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
   .nav-item {
@@ -264,7 +270,6 @@ color: #ffc400;
   /* Footer */
 
   footer {
-    position: fixed; /* Change to relative or static for better flow */
     bottom: 0;
     padding: 0.9em;
     border-top: 1px solid black;
@@ -272,7 +277,6 @@ color: #ffc400;
 
   .footer-container {
     grid-template-columns: 1fr;
-    gap: 1em; 
   }
 
   .footer-column-2,
@@ -287,4 +291,5 @@ color: #ffc400;
 
 /* Notes:
 – Animación depegar nav-list en @media query
+- nav-list sticky in @media query
  */
