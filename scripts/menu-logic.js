@@ -1,37 +1,87 @@
-fetch('JSON/Meny.json')
-    .then(response => response.json())
-    .then(data => {
-        const menu = document.querySelector('.menu');
+// Async function to load the menu from a JSON file
+async function loadMenu() {
+    try {
+        const response = await fetch('../JSON/Meny.json');
+        const data = await response.json();
 
-        for (const category in data.menu) {
-            //Create a unique ID from the category name
-            const categoryId = category.toLowerCase().replace(/ /g, '–').replace(/[^\w-]+/g, '');
+        const startersList = document.getElementById('starters-list');
+        const fishList = document.getElementById('fish-list');
+        const riceList = document.getElementById('rice-list');
+        const meatList = document.getElementById('meat-list');
+        const dessertList = document.getElementById('dessert-list');
 
-            // Create the dish-type div
-            const dishTypeDiv = document.createElement('div');
-            dishTypeDiv.id = categoryId;
-            dishTypeDiv.classList.add('dish-type');
-            dishTypeDiv.textContent = category;
+        // Function to create the dish list
+        function createDishList(categoryData, container, priceTypeLabe = '') {
+            try {
+                if (!categoryData || !Array.isArray(categoryData)) { //Error handling if data is missing
+                    throw new Error("Category data is invalid or missing.");
+                }
 
-            // Create the category container
-            const categoryElement = document.createElement('article');
-            categoryElement.classList.add('category');
-            categoryElement.innerHTML = `<ul></ul>`;
-            const dishList = categoryElement.querySelector('ul');
+                const dishList = container;
 
-            //Add dishes to the list
-            data.menu[category].forEach(dish => {
-                const dishElement = document.createElement('li');
-                dishElement.classList.add('dish');
-                dishElement.innerHTML = `<h4>${dish.namn}</h4><p>${dish.beskrivning} - ${dish.pris}</p>`;
-                dishList.appendChild(dishElement);
-            });
-            
-            //Append the dish-type div and the category container to the menu
-            menu.appendChild(dishTypeDiv);
-            menu.appendChild(categoryElement);
+                categoryData.forEach(dish => {
+                    if (!dish || !dish.namn || !dish.pris === undefined) { //Error handling id data is missing in a dish
+                        console.log("Dish data are incomplete: ", dish);
+                        return; //Skip incomplete dishes
+                    }
+
+                    const dishItem = document.createElement('li'); // Create a li-element for every dish
+                    dishItem.classList.add('dish');
+
+                    // Check if price is null
+                    let priceInfo = dish.pris !== null ? `${dish.pris} kr` : 'Fråga presonalen';
+
+                    //Check if dish.beskrivning is null
+                    const beskrivning = dish.beskrivning !== null ? dish.beskrivning : '';
+
+                    dishItem.innerHTML = `
+                        <p><strong>${dish.namn}</strong> <em>${beskrivning}</em> – ${priceInfo}.</p>
+                    `;
+                    dishList.appendChild(dishItem); // Add li to ul
+                });
+
+        } catch (error) { //Error handling
+            console.log("Error creating dish list: ", error);
         }
-    })
-    .catch(e => {
-        console.error("Error loading menu: " + e)
-    });
+    }
+
+    // Fill in the starters
+    try {
+        if (data.menu.starters) {
+            createDishList(data.menu.starters, startersList);
+        } else {
+            console.log("Starters category missing or empty.");
+        }
+    } catch (error) { //Error handling
+        console.log("Error processing starters: ", error);
+    }
+
+    // Fill in the main dishes
+    try {
+        if (data.menu['main-dish']) {
+            createDishList(data.menu['main-dish'].Fisk, fishList);
+            createDishList(data.menu['main-dish'].Ris, riceList);
+            createDishList(data.menu['main-dish'].Kött, meatList);
+        } else {
+            console.log("Main dish category missing or empty.");
+        }
+    } catch (error) { //Error handling
+        console.log("Error processing main dishes: ", error);
+    }
+
+    // Fill in the desserts
+    try {
+        if (data.menu.desserts) {
+            createDishList(data.menu.desserts, dessertList);
+        } else {
+            console.log("Desserts category missing or empty.");
+        }
+    } catch (error) { //Error handling
+        console.log("Error processing desserts: ", error);
+    }
+    } catch (error) { //Error handling of the entire code 
+        console.error("Error loading the menu: ", error);
+    }
+}
+
+loadMenu(); // Anrop the async function
