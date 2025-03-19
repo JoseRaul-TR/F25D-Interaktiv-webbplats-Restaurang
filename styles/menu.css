@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* –––––––––– */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 0 3em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu h2 {
+    color: #9a2130;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1em;
+    font-size: 2em;
+}
+
+.dish-container {
+    padding-bottom: 2em;
+}
+
+.dish-container h3 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.dish-container h3, .dish-container h4 {
+    padding-bottom: 1em;
+}
+
+#main-dish {
+    display: flex;
+    flex-direction: column;
+}
+
+#fish-section, #rice-section, #meat-section {
+    width: 100%;
+    padding-bottom: 1em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Responsiv design */
+@media (max-width: 768px){
+    .menu {
+        padding: 0 1em;
+    }
+}

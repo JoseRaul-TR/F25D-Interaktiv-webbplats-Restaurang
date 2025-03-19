@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/menu.css">
     <link rel="stylesheet" href="../styles/navbar-footer-styles.css">
 
     <script src="../scripts/menu-logic.js" defer></script>
@@ -32,10 +32,15 @@
                         <i class="fas fa-home"></i>Hem
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="./menu.html" class="nav-link">
+                <li class="nav-item dropdown">
+                    <a href="./menu.html" class="nav-link dropbtn">
                         <i class="fas fa-book-open"></i>A la carte
                     </a>
+                    <div class="dropdown-content">
+                        <a href="./menu.html#starters">Förrätter</a>
+                        <a href="./menu.html#main-dish">Varmrätter</a>
+                        <a href="./menu.html#desserts">Desserter</a>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a href="./lunchbuffe.html" class="nav-link">
@@ -62,7 +67,7 @@
     </header>
 
     <main>
-<!-- Finalizar estilos css -->
+
         <section class="menu">
             <h2>A la carte</h2>
 
@@ -76,17 +81,17 @@
                 <h3>Varmrätter</h3>
 
                 <div id="fish-section">
-                    <h4>Fisk</h4>
+                    <h4>– Fiskrätter:</h4>
                     <ul id="fish-list"></ul>
                 </div>
 
                 <div id="rice-section">
-                    <h4>Ris</h4>
+                    <h4>– Risrätter:</h4>
                     <ul id="rice-list"></ul>
                 </div>
 
                 <div id="meat-section">
-                    <h4>Kött</h4>
+                    <h4>– Kötträtter:</h4>
                     <ul id="meat-list"></ul>
                 </div>
             </div>

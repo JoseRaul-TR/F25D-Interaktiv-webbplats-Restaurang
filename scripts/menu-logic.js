@@ -11,16 +11,16 @@ async function loadMenu() {
         const dessertList = document.getElementById('dessert-list');
 
         // Function to create the dish list
-        function createDishList(categoryData, container, priceTypeLabe = '') {
+        function createDishList(categoryData, container = '') {
             try {
                 if (!categoryData || !Array.isArray(categoryData)) { //Error handling if data is missing
                     throw new Error("Category data is invalid or missing.");
+                } while (container.firstChild) { // Clear existing list items
+                    container.removeChild(container.firstChild);
                 }
 
-                const dishList = container;
-
                 categoryData.forEach(dish => {
-                    if (!dish || !dish.namn || !dish.pris === undefined) { //Error handling id data is missing in a dish
+                    if (!dish || !dish.namn || !dish.pris === undefined) { //Error handling id data is missing in a dish data
                         console.log("Dish data are incomplete: ", dish);
                         return; //Skip incomplete dishes
                     }
@@ -28,16 +28,16 @@ async function loadMenu() {
                     const dishItem = document.createElement('li'); // Create a li-element for every dish
                     dishItem.classList.add('dish');
 
-                    // Check if price is null
-                    let priceInfo = dish.pris !== null ? `${dish.pris} kr` : 'Fråga presonalen';
+                    // Check if dish.price is null
+                    let priceInfo = dish.pris !== null ? `${dish.pris} kr` : 'Fråga presonalen om priset';
 
-                    //Check if dish.beskrivning is null
-                    const beskrivning = dish.beskrivning !== null ? dish.beskrivning : '';
+                    //Check if dish.allergier is null
+                    let allergierInfo = dish.allergier !== null ? dish.allergier : 'Fråga personalen om allergier.';
 
                     dishItem.innerHTML = `
-                        <p><strong>${dish.namn}</strong> <em>${beskrivning}</em> – ${priceInfo}.</p>
+                        <p><strong>${dish.namn}</strong> <em>${allergierInfo}</em> – ${priceInfo}.</p>
                     `;
-                    dishList.appendChild(dishItem); // Add li to ul
+                    container.appendChild(dishItem); // Add li to ul
                 });
 
         } catch (error) { //Error handling
@@ -59,9 +59,9 @@ async function loadMenu() {
     // Fill in the main dishes
     try {
         if (data.menu['main-dish']) {
-            createDishList(data.menu['main-dish'].Fisk, fishList);
-            createDishList(data.menu['main-dish'].Ris, riceList);
-            createDishList(data.menu['main-dish'].Kött, meatList);
+            createDishList(data.menu['main-dish'].fiskrätter, fishList);
+            createDishList(data.menu['main-dish'].risrätter, riceList);
+            createDishList(data.menu['main-dish'].kötträter, meatList);
         } else {
             console.log("Main dish category missing or empty.");
         }

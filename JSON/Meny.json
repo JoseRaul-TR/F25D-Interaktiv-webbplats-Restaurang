@@ -3,269 +3,268 @@
         "starters": [
             {
                 "namn": "Mulle-rom, mojama (tonfisk) från almadraba och Marcona-mandlar.",
-                "beskrivning": "Nötter/Fisk.",
+                "allergier": "Nötter/Fisk.",
                 "pris": "46"
             },
             {
                 "namn": "Kantabriskta äktenskap med oliver.",
-                "beskrivning": "Fisk.",
+                "allergier": "Fisk.",
                 "pris": "32"
             },
             {
                 "namn": "Murciansk marinera med ansjovis från Kantabriska sjön.",
-                "beskrivning": "Gluten/Fisk/Ägg.",
+                "allergier": "Gluten/Fisk/Ägg.",
                 "pris": "35"
             },
             {
                 "namn": "Iberisk skinka.",
-                "beskrivning": null,
+                "allergier": null,
                 "pris": "276"
             },
             {
                 "namn": "Urval av iberiska charkuterier och fårost.",
-                "beskrivning": "Mjölk.",
+                "allergier": "Mjölk.",
                 "pris": "207"
             },
             {
                 "namn": "Parmesanbitar med \"regañinas\" (kex).",
-                "beskrivning": "Nötter/Mjölk.",
+                "allergier": "Nötter/Mjölk.",
                 "pris": "173"
             },
             {
                 "namn": "\"Caballito\" med sammet av citron (friterad räka).",
-                "beskrivning": "Kräftdjur/Gluten.",
+                "allergier": "Kräftdjur/Gluten.",
                 "pris": "32"
             },
             {
                 "namn": "Bläckfisk från klipporna med paprikapulver och krossad potatis.",
-                "beskrivning": "Blötdjur.",
+                "allergier": "Blötdjur.",
                 "pris": "242"
             },
             {
                 "namn": "Musslor sauterade med pinjenötter och vitlök.",
-                "beskrivning": "Blötdjur/Nötter.",
+                "allergier": "Blötdjur/Nötter.",
                 "pris": "253"
             },
             {
                 "namn": "Bläckfisk från bukten på andalusiskt vis med Padrón-paprika.",
-                "beskrivning": "Blötdjur.",
+                "allergier": "Blötdjur.",
                 "pris": "213"
             },
             {
                 "namn": "Kroketter på iberisk skinka med rödvinssirap.",
-                "beskrivning": "Gluten/Mjölk/Ägg/Sulfiter.",
+                "allergier": "Gluten/Mjölk/Ägg/Sulfiter.",
                 "pris": "31"
             },
             {
                 "namn": "Spenatkroketter med hallonsylt.",
-                "beskrivning": "Mjölk/Ägg/Nötter/Gluten.",
+                "allergier": "Mjölk/Ägg/Nötter/Gluten.",
                 "pris": "29"
             },
             {
                 "namn": "Torskfiskbulle med en touch av aioli.",
-                "beskrivning": "Mjölk/Fisk/Gluten.",
+                "allergier": "Mjölk/Fisk/Gluten.",
                 "pris": "41"
             },
             {
-                "namn": "\"Patatas asas\" (Ungbakad potatis) med vitlök. 6 styck.",
-                "beskrivning": "Mjölk.",
+                "namn": "\"Patatas asas\" (ungbakad potatis) med vitlök. 6 styck.",
+                "allergier": "Mjölk.",
                 "pris": "92"
             },
             {
                 "namn": "Ljumna sallad med vedugnsrostade grönsaker, olivolja och vitlök.",
-                "beskrivning": null,
+                "allergier": null,
                 "pris": "161"
             },
             {
-                "namn": "Delad tomat med piparras (spansk peppar) och tonfisk.",
-                "beskrivning": "Fisk.",
-                "pris": "178.25"
+                "namn": "Delad tomat med \"piparras\" (spansk peppar) och tonfisk.",
+                "allergier": "Fisk.",
+                "pris": "179"
             },
             {
                 "namn": "Vår special sallad.",
-                "beskrivning": "Fisk/Ägg.",
-                "pris": "172.50"
+                "allergier": "Fisk/Ägg.",
+                "pris": "173"
             },
             {
                 "namn": "Sallad med sommarfrukter, olja, pinjenötter och mangosirap.",
-                "beskrivning": "Nötter/Mjölk.",
+                "allergier": "Nötter/Mjölk.",
                 "pris": "184"
             },
             {
                 "namn": "Avokadosallad med ansjovis och parmesanflingor.",
-                "beskrivning": "Fisk/Mjölk.",
-                "pris": "187.45"
+                "allergier": "Fisk/Mjölk.",
+                "pris": "188"
             },
             {
-                "namn": "Traditionell gazpacho på en isbädd.",
-                "beskrivning": null,
-                "pris": "63.25"
+                "namn": "Traditionell \"gazpacho\" på en isbädd.",
+                "allergier": null,
+                "pris": "64"
             },
             {
                 "namn": "Murciansk \"zarangollo\" (ägg med grönsaker).",
-                "beskrivning": "Ägg.",
+                "allergier": "Ägg.",
                 "pris": "138"
             },
             {
-                "namn": "Traditionell pisto (spansk ratatouille) med stekta ägg.",
-                "beskrivning": "Ägg.",
+                "namn": "Traditionell \"pisto\" (spansk ratatouille) med stekta ägg.",
+                "allergier": "Ägg.",
                 "pris": "138"
             },
             {
                 "namn": "Röra på gyllene torsk med sparris och vitlök.",
-                "beskrivning": "Ägg/Fisk.",
-                "pris": "187.45"
+                "allergier": "Ägg/Fisk.",
+                "pris": "188"
             },
             {
                 "namn": "Gårdsägg med iberisk skinka.",
-                "beskrivning": "Ägg.",
-                "pris": "172.50"
+                "allergier": "Ägg.",
+                "pris": "172"
             }
         ],
         "main-dish": {
-            "Fisk": [
+            "fiskrätter": [
                 {
                     "namn": "Torskbit med aioli och kaviarolja.",
-                    "beskrivning": "Fisk/Mjölk.",
+                    "allergier": "Fisk/Mjölk.",
                     "pris": "207"
                 },
                 {
                     "namn": "Sankt Petersfisk stekt i panna med färsk vitlök.",
-                    "beskrivning": "Fisk.",
-                    "pris": "287.50"
+                    "allergier": "Fisk.",
+                    "pris": "288"
                 },
                 {
                     "namn": "Kummelbit med saffransås och laxpärlor.",
-                    "beskrivning": "Fisk/Gluten.",
+                    "allergier": "Fisk/Gluten.",
                     "pris": "253"
                 },
                 {
                     "namn": "Piggvar med macadamianötter och Verdejo-vin.",
-                    "beskrivning": "Fisk/Nötter/Kräftdjur.",
+                    "allergier": "Fisk/Nötter/Kräftdjur.",
                     "pris": "299"
                 },
                 {
-                    "namn": "*Fråga om dagens fisk, tillagad efter kockens önskemål.",
-                    "beskrivning": null,
-                    "pris": null,
-                    "pris_typ": null
+                    "namn": "* Dagens fångst, tillagad efter kockens önskemål.",
+                    "allergier": null,
+                    "pris": null
                 }
             ],
-            "Ris": [
+            "risrätter": [
                 {
                     "namn": "Ris med lantkyckling.",
-                    "beskrivning": null,
-                    "pris": "172.50"
+                    "allergier": null,
+                    "pris": "173"
                 },
                 {
                     "namn": "Ris med kanin och sniglar.",
-                    "beskrivning": null,
-                    "pris": "195.50"
+                    "allergier": null,
+                    "pris": "196"
                 },
                 {
                     "namn": "Ris med grönsaker.",
-                    "beskrivning": null,
-                    "pris": "172.50"
+                    "allergier": null,
+                    "pris": "173"
                 },
                 {
                     "namn": "\"Arroz a banda\" (ris med skaldjur och fisk vid sidan).",
-                    "beskrivning": "Kräftdjur/Fisk.",
+                    "allergier": "Kräftdjur/Fisk.",
                     "pris": "207"
                 },
                 {
                     "namn": "Ris med magert kött och revben.",
-                    "beskrivning": null,
-                    "pris": "172.50"
+                    "allergier": null,
+                    "pris": "173"
                 }
             ],
-            "Kött": [
+            "kötträter": [
                 {
                     "namn": "Killing med vitlökssås.",
-                    "beskrivning": "Sulfiter",
+                    "allergier": "Sulfiter",
                     "pris": "207"
                 },
                 {
                     "namn": "Oxfilé med foie och Pedro Ximénez-vin.",
-                    "beskrivning": "Gluten/Nötter/Sulfiter.",
-                    "pris": "333.50"
+                    "allergier": "Gluten/Nötter/Sulfiter.",
+                    "pris": "334"
                 },
                 {
                     "namn": "Skivor av iberisk \"secreto\" (fläsk) med småpotatis och paprika.",
-                    "beskrivning": null,
+                    "allergier": null,
                     "pris": "230"
                 }, 
                 {
                     "namn": "Lamm från grillen med småpotatis och paprika.",
-                    "beskrivning": null,
+                    "allergier": null,
                     "pris": "207"
                 }, 
                 {
-                    "namn": "Chuletón (kotlett) av Murciansk \"Chato\"-gris med grillad potatis och piquillo-paprika.",
-                    "beskrivning": null,
+                    "namn": "\"Chuletón\" (kotlett) av Murciansk \"Chato\" gris med grillad potatis och piquillo-paprika.",
+                    "allergier": null,
                     "pris": "253"
                 },
                 {
                     "namn": "Entrecote av nöt med småpotatis och paprika.",
-                    "beskrivning": null,
+                    "allergier": null,
                     "pris": "276"
                 },
                 {
-                    "namn": "Varierad köttgrill med Padrón-paprika och \"a lo pobre\"-potatis.",
-                    "beskrivning": null,
-                    "pris": "172.50"
+                    "namn": "Varierad köttgrill med Padrón-paprika och \"a lo pobre\" potatis.",
+                    "allergier": null,
+                    "pris": "173"
                 }
             ]
         },
         "desserts": [
             {
                 "namn": "Friterad mjölk, \"paparajote\" (citronblad med deg) och nougatglass.",
-                "beskrivning": "Mjölk/Gluten/Nötter/Sulfiter/Ägg.",
-                "pris": "80.50"
+                "allergier": "Mjölk/Gluten/Nötter/Sulfiter/Ägg.",
+                "pris": "81"
             },
             {
                 "namn": "Pärlmiljö med Bullas D.O.-vin och vit chokladkräm.",
-                "beskrivning": "Laktos/Gluten/Sulfiter.",
+                "allergier": "Laktos/Gluten/Sulfiter.",
                 "pris": "92"
             },
             {
-                "namn": "\"Asiático\"-tiramisu (kaffedrink).",
-                "beskrivning": "Laktos/Gluten/Ägg/Sulfiter.",
-                "pris": "74.75"
+                "namn": "\"Asiático\" tiramisu (kaffedrink).",
+                "allergier": "Laktos/Gluten/Ägg/Sulfiter.",
+                "pris": "75"
             },
             {
                 "namn": "Farmors tårta.",
-                "beskrivning": "Gluten/Ägg/Sulfiter/Laktos.",
+                "allergier": "Gluten/Ägg/Sulfiter/Laktos.",
                 "pris": "69"
             },
             {
                 "namn": "Urval av säsongens frukter.",
-                "beskrivning": null,
+                "allergier": null,
                 "pris": "69"
             },
             {
                 "namn": "Risgrynsgröt.",
-                "beskrivning": "Laktos.",
+                "allergier": "Laktos.",
                 "pris": "69"
             },
             {
                 "namn": "Chokoladbrownie med engelsk vaniljsås.",
-                "beskrivning": "Ägg/Laktos/Nötter/Gluten.",
-                "pris": "74.75"
+                "allergier": "Ägg/Laktos/Nötter/Gluten.",
+                "pris": "75"
             },
             {
-                "namn": "\"Paparajote\"-blad (citronblad med deg).",
-                "beskrivning": "Ägg/Laktos/Gluten.",
-                "pris": "21.85"
+                "namn": "\"Paparajote\" (citronblad med deg).",
+                "allergier": "Ägg/Laktos/Gluten.",
+                "pris": "22"
             },
             {
                 "namn": "Vårt traditionella \"pan de calatrava\" (brödpudding).",
-                "beskrivning": "Laktos/Gluten/Ägg.",
+                "allergier": "Laktos/Gluten/Ägg.",
                 "pris": "69"
             },
             {
                 "namn": "\"Natillas de la huerta\" (vaniljkräm).",
-                "beskrivning": "Laktos/Sulfiter/Gluten.",
-                "pris": "63.25"
+                "allergier": "Laktos/Sulfiter/Gluten.",
+                "pris": "64"
             }
         ]
     }

@@ -14,10 +14,17 @@ body {
 
 }
 
-/* ––– */
+main {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+/* –––––––––– */
 
 .container {
-    width: 80%;
+    width: 85%;
     max-width: 1200px;
     margin: 4em auto;
     padding: 3em;
@@ -50,6 +57,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .presentation.container > h2,

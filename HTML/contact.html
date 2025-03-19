@@ -6,10 +6,10 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/contact.css">
     <link rel="stylesheet" href="../styles/navbar-footer-styles.css">
 
-    <script src="../scripts/script.js" defer></script>
+    <script src="../scripts/contact-form.js" defer></script>
     <script src="../scripts/navbar-script.js" defer></script>
 
     <title>Restaurang Entre Limones</title>
@@ -62,18 +62,30 @@
 
     <main>
 
-        <section id="om-oss" class="container">
-            <h2>Välkommen till Restaurang Entre Limones</h2>
-            <p>En smakupplevelse av Murcias köks tradition i Karlstad.</p>
-            <p>På Entre Limones bjuder vi in dig att utforska Murcias unika matkultur. Vår meny är en hyllning till denna spanska regions rika gastronomiska arv, med rätter som tillagas enligt traditionella recept och med lokala ingredienser. Från saftiga grönsaker och färsk fisk till mustiga risrätter och smakrika tapas – vi tar dig med på en smakupplevelse som speglar Murcias mångfald och passion för mat.</p>
+        <section class="contact-form">
+            <h2>Kontakta oss</h2>
+            <form id="contactForm" onsubmit="return validateForm()">
+                <div class="form-group">
+                    <label for="name">Namn:</label>
+                    <input type="text" id="name" name="name">
+                    <div id="nameError" class="error-message"></div>
+                </div>
 
-            <p>Restaurang Namn öppnade sina dörrar år [Årtal] och har sedan dess varit en favorit bland lokalbefolkningen och besökare. Vår historia började med en dröm om att skapa en plats där människor kan samlas och njuta av god mat i en avslappnad atmosfär.</p>
-    
-            <p>Vår matfilosofi bygger på att använda färska, lokala råvaror och att tillaga maten med kärlek och passion. Vi tror på att mat ska vara en upplevelse för alla sinnen, och vi strävar efter att skapa rätter som är både vackra och smakrika.</p>
-    
-            <p>Vårt köksteam, under ledning av [Kockens namn], har en gedigen erfarenhet och en passion för matlagning. Vi är stolta över att kunna erbjuda en meny som speglar vår kärlek till mat och vår respekt för traditioner.</p>
-    
-            <p>Välkommen att uppleva Restaurang Namn – en plats där mat och gemenskap möts.</p>
+                <div class="form-group">
+                    <label for="email">Epost adress:</label>
+                    <input type="email" id="email" name="email">
+                    <div id="emailError" class="error-message"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Meddelande:</label>
+                    <input type="message" id="message" name="message">
+                    <div id="messageError" class="error-message"></div>
+                </div>
+
+                <button type="submit" class="submit-btn">Skicka meddelande</button>
+            </form>
+
         </section>
 
     </main>
@@ -93,7 +105,6 @@
             </div>
     
             <div class="footer-column-2">
-                <h3>Restaurang Entre Limones</h3>
                 <div class="social-icons">
                     <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                     <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -105,14 +116,12 @@
             </div>
 
             <div class="footer-column-3">
-                <h3>Kontakt</h3>
+                <h3>Restaurang Entre Limones</h3>
                 <address>
                     <i class="fas fa-map-marker-alt"></i>Restaurang Entre Limones<br>
                     Gatuadress 123<br>
                     123 45 Stad<br>
                 </address>
-                <p><a href="tel:+46123456789"><i class="fas fa-phone"></i>012-345 67 89</a></p>
-                <p><a href="mailto:email@example.com"><i class="fas fa-envelope"></i>email@example.com</a></p>
             </div>
 
         </div>
