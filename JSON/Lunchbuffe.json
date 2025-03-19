@@ -1,0 +1,42 @@
+{
+    "lunchbuffet": {
+
+        "weekday": {
+            "days": ["Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag"],
+            "hours": "11:30 - 14:00"
+        },
+        "sunday": {
+            "day": "Söndag",
+            "hours": "12:30 - 15:00"
+        }
+    },
+
+    "dailyMenu": [
+        {
+            "day": "Måndag - Fredag",
+            "starter": "Traditionell \"gazpacho\", murciansk \"zarangollo\" (ägg med grönsaker) eller husets sallad.",
+            "mainDish": "Ris med magert kött och revben, Torskbit med aioli eller kanin \"al ajillo\" (med vitlök).",
+            "dessert": "Säsongens frukt, risgrynsgröt, \"natillas de la huerta\" (vaniljkräm) eller kaffe."
+        },
+        {
+            "day": "Söndag",
+            "starter": "Mulle-rom, mojama (tonfisk) från almadraba och Marcona-mandlar.",
+            "mainDish": "Ris med kanin och sniglar.",
+            "dessert": "Säsongens frukt, \"paparajote\" (citronblad med deg), risgrynsgröt, \"natillas de la huerta\" (vaniljkräm) eller kaffe."
+        }
+    ],
+
+    "drinks": {
+        "included": "Vatten",
+        "supplement": [
+            {
+                "name": "\"Estrella Levante\" (öl), \"Vino de la casa\" (husetsvin) eller läsk",
+                "price": 30
+            }
+        ]
+    },
+
+    "priceList": {
+        "Price": 250
+    }
+}

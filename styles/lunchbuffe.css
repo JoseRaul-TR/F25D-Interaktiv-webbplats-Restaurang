@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    width: 100vw;
+    min-height: 100vh;
+
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+/* ––––––––––––– */
+
+#lunchbuffet {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 0 3em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #9a2130;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1em;
+    font-size: 2em;
+}
+
+h3 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.availability,
+.menu,
+.drinks,
+.prices {
+    margin-bottom: 20px;
+}
+
+ul#daily-menu {
+    list-style: none;
+    padding: 0;
+}
+
+ul#daily-menu li {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+ul#supplement-drinks {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+p {
+    line-height: 1.6;
+    color: #666;
+}
+
+span {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Responsiv design */
+@media (max-width: 600px) {
+    #lunchbuffet {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+}

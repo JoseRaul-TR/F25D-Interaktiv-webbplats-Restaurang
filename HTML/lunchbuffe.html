@@ -6,10 +6,10 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/lunchbuffe.css">
     <link rel="stylesheet" href="../styles/navbar-footer-styles.css">
 
-    <script src="../scripts/script.js" defer></script>
+    <script src="../scripts/lunchbuffe-logic.js" defer></script>
     <script src="../scripts/navbar-script.js" defer></script>
 
     <title>Restaurang Entre Limones</title>
@@ -62,18 +62,26 @@
 
     <main>
 
-        <section id="om-oss" class="container">
-            <h2>Välkommen till Restaurang Entre Limones</h2>
-            <p>En smakupplevelse av Murcias köks tradition i Karlstad.</p>
-            <p>På Entre Limones bjuder vi in dig att utforska Murcias unika matkultur. Vår meny är en hyllning till denna spanska regions rika gastronomiska arv, med rätter som tillagas enligt traditionella recept och med lokala ingredienser. Från saftiga grönsaker och färsk fisk till mustiga risrätter och smakrika tapas – vi tar dig med på en smakupplevelse som speglar Murcias mångfald och passion för mat.</p>
+        <section id="lunchbuffet">
 
-            <p>Restaurang Namn öppnade sina dörrar år [Årtal] och har sedan dess varit en favorit bland lokalbefolkningen och besökare. Vår historia började med en dröm om att skapa en plats där människor kan samlas och njuta av god mat i en avslappnad atmosfär.</p>
-    
-            <p>Vår matfilosofi bygger på att använda färska, lokala råvaror och att tillaga maten med kärlek och passion. Vi tror på att mat ska vara en upplevelse för alla sinnen, och vi strävar efter att skapa rätter som är både vackra och smakrika.</p>
-    
-            <p>Vårt köksteam, under ledning av [Kockens namn], har en gedigen erfarenhet och en passion för matlagning. Vi är stolta över att kunna erbjuda en meny som speglar vår kärlek till mat och vår respekt för traditioner.</p>
-    
-            <p>Välkommen att uppleva Restaurang Namn – en plats där mat och gemenskap möts.</p>
+            <h2>Lunchbuffé</h2>
+            <p>Njut av vår varierade lunchbuffé med färska och läckra alternativ att välja på.</p>
+        
+            <h3>Tillgänglighet</h3>
+            <p>Måndag - Fredag: <span id="weekday-hours"></span></p>
+            <p>Söndag: <span id="sunday-hours"></span></p>
+        
+            <h3>Dagens Meny</h3>
+            <ul id="daily-menu"></ul>
+
+            <h3>Drycker</h3>
+            <p>Inkluderade drycker: <span id="included-drinks"></span></p>
+            <p>Tilläggs drycker: <span id="supplement-drinks"></span></p>
+        
+            <h3>Pris</h3>
+            <p><span id="price"></span> kr</p>
+            
+
         </section>
 
     </main>
@@ -82,7 +90,7 @@
         <div class="footer-container">
 
             <div class="footer-column-1">
-                <h3>Sidokarta</h3>
+                <h4>Sidokarta</h4>
                 <ul class="footer-sidokarta">
                 <li><a href="../index.html">Hem</a></li>
                 <li><a href="./menu.html">A la carte</a></li>
@@ -93,19 +101,16 @@
             </div>
     
             <div class="footer-column-2">
-                <h3>Restaurang Entre Limones</h3>
+                <a href="../index.html"><h4>Restaurang Entre Limones</h4></a>
                 <div class="social-icons">
                     <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                     <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
                 </div>
-                <div class="copyright">
-                    <p>&copy; <span id="copyright-year"></span> – José Raúl Tenza Ramírez<br>All rights reserved</p>
-                </div>
             </div>
 
             <div class="footer-column-3">
-                <h3>Kontakt</h3>
+                <h4>Kontakt</h4>
                 <address>
                     <i class="fas fa-map-marker-alt"></i>Restaurang Entre Limones<br>
                     Gatuadress 123<br>
@@ -116,6 +121,11 @@
             </div>
 
         </div>
+
+        <div class="copyright-container">
+            <p>&copy; <span id="copyright-year"></span> – José Raúl Tenza Ramírez<br>All rights reserved</p>
+        </div>
+        
     </footer>
 
 </body>
