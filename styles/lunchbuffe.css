@@ -76,7 +76,7 @@ ul#supplement-drinks li:last-of-type {
     padding-bottom: 10px;
 }
 
-p {
+#lunchbuffet p {
     line-height: 1.6;
     text-align: center;
 }
@@ -93,5 +93,23 @@ p {
 
     h3 {
         font-size: 1.2em;
+    }
+}
+
+/* Dark Theme */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1e1e1e;
+        color: #e0e0e0;
+    }
+
+    #lunchbuffet {
+        background-color: #121212;
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    }
+
+    ul#daily-menu li,
+    ul#supplement-drinks li:last-of-type {
+        border-bottom: 1px solid #444; /* Darker border */
     }
 }
