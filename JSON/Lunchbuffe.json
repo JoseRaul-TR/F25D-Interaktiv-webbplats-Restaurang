@@ -30,8 +30,16 @@
         "included": "Vatten",
         "supplement": [
             {
-                "name": "\"Estrella Levante\" (öl), \"Vino de la casa\" (husetsvin) eller läsk",
+                "name": "\"Estrella Levante\" (öl)",
                 "price": 30
+            },
+            {
+                "name": "\"Vino de la casa\" (husetsvin)",
+                "price": 30
+            },
+            {
+                "name": "Läsk",
+                "price": 20
             }
         ]
     },

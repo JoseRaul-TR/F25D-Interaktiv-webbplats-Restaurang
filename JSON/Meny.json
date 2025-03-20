@@ -18,7 +18,7 @@
             },
             {
                 "namn": "Iberisk skinka.",
-                "allergier": null,
+                "allergier": "Fråga personalen om allergier.",
                 "pris": "276"
             },
             {
@@ -73,7 +73,7 @@
             },
             {
                 "namn": "Ljumna sallad med vedugnsrostade grönsaker, olivolja och vitlök.",
-                "allergier": null,
+                "allergier": "Fråga personalen om allergier.",
                 "pris": "161"
             },
             {
@@ -98,7 +98,7 @@
             },
             {
                 "namn": "Traditionell \"gazpacho\" på en isbädd.",
-                "allergier": null,
+                "allergier": "Fråga personalen om allergier.",
                 "pris": "64"
             },
             {
@@ -153,17 +153,17 @@
             "risrätter": [
                 {
                     "namn": "Ris med lantkyckling.",
-                    "allergier": null,
+                    "allergier": "Fråga personalen om allergier.",
                     "pris": "173"
                 },
                 {
                     "namn": "Ris med kanin och sniglar.",
-                    "allergier": null,
+                    "allergier": "Fråga personalen om allergier.",
                     "pris": "196"
                 },
                 {
                     "namn": "Ris med grönsaker.",
-                    "allergier": null,
+                    "allergier": "Fråga personalen om allergier.",
                     "pris": "173"
                 },
                 {
@@ -173,7 +173,7 @@
                 },
                 {
                     "namn": "Ris med magert kött och revben.",
-                    "allergier": null,
+                    "allergier": "Fråga personalen om allergier.",
                     "pris": "173"
                 }
             ],
@@ -190,27 +190,27 @@
                 },
                 {
                     "namn": "Skivor av iberisk \"secreto\" (fläsk) med småpotatis och paprika.",
-                    "allergier": null,
+                    "allergier": "Fråga personalen om allergier.",
                     "pris": "230"
                 }, 
                 {
                     "namn": "Lamm från grillen med småpotatis och paprika.",
-                    "allergier": null,
+                    "allergier": "Fråga personalen om allergier.",
                     "pris": "207"
                 }, 
                 {
                     "namn": "\"Chuletón\" (kotlett) av Murciansk \"Chato\" gris med grillad potatis och piquillo-paprika.",
-                    "allergier": null,
+                    "allergier": "Fråga personalen om allergier.",
                     "pris": "253"
                 },
                 {
                     "namn": "Entrecote av nöt med småpotatis och paprika.",
-                    "allergier": null,
+                    "allergier": "Fråga personalen om allergier.",
                     "pris": "276"
                 },
                 {
                     "namn": "Varierad köttgrill med Padrón-paprika och \"a lo pobre\" potatis.",
-                    "allergier": null,
+                    "allergier": "Fråga personalen om allergier.",
                     "pris": "173"
                 }
             ]
@@ -238,7 +238,7 @@
             },
             {
                 "namn": "Urval av säsongens frukter.",
-                "allergier": null,
+                "allergier": "Fråga personalen om allergier.",
                 "pris": "69"
             },
             {

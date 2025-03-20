@@ -31,11 +31,11 @@ async function fetchLunchData() {
 
         // Drycker
         document.getElementById('included-drinks').textContent = data.drinks.included;
-
+        
         const supplementList = document.getElementById('supplement-drinks');
         data.drinks.supplement.forEach(drink => {
             const drinkItem = document.createElement('li');
-            drinkItem.textContent = `${drink.name}: ${drink.price} kr`;
+            drinkItem.textContent = `${drink.name} – ${drink.price} kr`;
             supplementList.appendChild(drinkItem);
 
 

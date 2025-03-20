@@ -16,7 +16,7 @@ body {
 main {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
 }
 
@@ -43,15 +43,28 @@ main {
 
 .dish-container {
     padding-bottom: 2em;
+    border-bottom: 1px solid #bcbaba;
+}
+
+.dish-container:last-of-type {
+    border-bottom: none;
 }
 
 .dish-container h3 {
     text-align: center;
-    text-decoration: underline;
 }
 
-.dish-container h3, .dish-container h4 {
+.dish-container:not(:first-of-type) h3 {
+    padding-top: 1em;
+}
+
+.dish-container h3, 
+.dish-container h4 {
     padding-bottom: 1em;
+}
+
+.dish-container h4{
+    text-decoration: underline;
 }
 
 #main-dish {
@@ -59,7 +72,9 @@ main {
     flex-direction: column;
 }
 
-#fish-section, #rice-section, #meat-section {
+#fish-section, 
+#rice-section, 
+#meat-section {
     width: 100%;
     padding-bottom: 1em;
 }
@@ -76,4 +91,4 @@ ul {
     }
 }
 
-/* Change layout to have differetiate visual sections for the different dish types */
+/* Change layout to have differetiate visual sections for the different di */

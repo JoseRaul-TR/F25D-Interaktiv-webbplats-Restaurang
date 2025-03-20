@@ -29,14 +29,14 @@ async function loadMenu() {
                     const dishItem = document.createElement('li'); // Create a li-element for every dish
                     dishItem.classList.add('dish');
 
-                    // Check if dish.price is null
-                    let priceInfo = dish.pris !== null ? `${dish.pris} kr` : 'Fråga presonalen om priset';
+                    // Leave price empty if null in JSON
+                    let priceInfo = dish.pris !== null ? `${dish.pris} kr` : '';
 
-                    //Check if dish.allergier is null
-                    let allergierInfo = dish.allergier !== null ? dish.allergier : 'Fråga personalen om allergier.';
+                    // Leave allergies empty if null in JSON
+                    let allergierInfo = dish.allergier !== null ? dish.allergier : '';
 
                     dishItem.innerHTML = `
-                        <p><strong>${dish.namn}</strong> <em>${allergierInfo}</em> – ${priceInfo}.</p>
+                        <p>${dish.namn} <em>${allergierInfo}</em> – ${priceInfo}.</p>
                     `;
                     container.appendChild(dishItem); // Add li to ul
                 });
@@ -91,10 +91,10 @@ async function loadMenu() {
     } catch (error) { //Error handling
         console.log("Error processing drinks: ", error);
     }
-    
+
     } catch (error) { //Error handling of the entire code 
         console.error("Error loading the menu: ", error);
     }
 }
 
-loadMenu(); // Anrop the async function
+loadMenu();
