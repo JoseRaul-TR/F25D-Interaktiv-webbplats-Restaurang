@@ -31,3 +31,5 @@ function validateForm() {
 
     return isValid;
 }
+
+// Add pop up: "Ditt meddelande har skickats."

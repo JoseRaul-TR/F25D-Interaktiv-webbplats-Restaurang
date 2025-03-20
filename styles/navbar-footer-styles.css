@@ -4,6 +4,7 @@
   flex-direction: column;
   background-color: #fff;
   width: 100%;
+  height: 50%;
   position: relative;
 }
 
@@ -23,6 +24,14 @@
 .logo-container a:hover {
   color: #ffc400;
   transition: color 0.3s ease;
+}
+
+.nav-container {
+  height: 50%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #fff; /* <–– check */
 }
 
 .main-nav {
@@ -94,16 +103,47 @@
 }
 
 /* Dropdown Styles */
+.nav-item.dropdown {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.nav-link.dropbtn {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link.dropbtn::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid currentColor;
+  margin-left: .8em;
+  transition: transform 0.3s ease;
+}
+
+.nav-link.dropbtn[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+}
+
+.nav-link.dropbtn i {
+  padding-right: 0.5em;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
   background-color: transparent;
   backdrop-filter: blur(10px);
-  width: 100%;
   border: 1px solid #000;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  left: 0;
+  z-index: 10;
 }
 
 .dropdown-content a {
@@ -120,10 +160,6 @@
   border-bottom: none;
 }
 
-.nav-item.dropdown:hover .dropdown-content {
-  display: block;
-}
-
 .nav-item.dropdown .nav-link {
     cursor: pointer;
 }
@@ -134,31 +170,23 @@ footer {
   color: #333;
   background-color: transparent;
   backdrop-filter: blur(10px);
-  margin-top: 1em;
   padding: 1em;
   bottom: 0;
   width: 100%;
   z-index: 100;
-  border-top: 1px solid black;
+  border-top: 1px solid #000;
 }
 
-.footer-container {
+.footer-columns-container {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.footer-column-1 {
-  text-align: left;
-}
-
-.footer-column-2 {
-  text-align: center;
-}
-
+.footer-column-1,
+.footer-column-2,
 .footer-column-3 {
-  text-align: right;
+  width: 33%;
 }
 
 footer h4 {
@@ -167,42 +195,42 @@ footer h4 {
   margin-top: 0;
 }
 
-.footer-sidokarta {
+.footer-column-1 {
+  text-align: left;
+}
+
+.footer-sitemap {
   list-style: none;
   padding: 0;
 }
 
-.footer-sidokarta li {
-  margin-bottom: 1em;
-}
-
-.footer-sidokarta a {
+.footer-sitemap a {
   color: inherit;
   text-decoration: none;
 }
 
-.footer-sidokarta a:hover {
+.footer-sitemap a:hover {
   text-decoration: underline;
   cursor: pointer;
   color: #ffc400;
-  transition: text-decoration 0.3s ease;
-}
-
-.footer-column-2 a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.footer-column-2 a:hover {
-  cursor: pointer;
-  color: #ffc400;
-  text-decoration: underline;
   transition: color 0.3s ease;
+}
+
+.footer-column-2 {
+  text-align: center;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: .5em;
+  width: 100%;
 }
 
 .social-icons a {
   display: inline-block;
-  margin-right: 2rem;
+  margin: 0 1rem;
   font-size: 1.5em;
   color: inherit;
 }
@@ -212,11 +240,16 @@ footer h4 {
   transition: color 0.3s ease;
 }
 
+.footer-column-3 {
+  text-align: right;
+}
+
 .footer-column-3 address {
   font-style: normal;
+  margin-bottom: 1em;
 }
 .footer-column-3 i {
-  margin-right: 1rem; 
+  margin-right: 0.5rem;
 }
 
 .footer-column-3 a {
@@ -232,10 +265,16 @@ footer h4 {
 }
 
 .copyright-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: 0.8em;
   color: #888;
   text-align: center;
+  width: 100%; 
+  margin-top: 1em;
 }
+
 
 /* –––––––––––– Responsive adjustments ––––––––––––––– */
 
@@ -328,32 +367,44 @@ footer h4 {
 
   /* Footer */
 
-  footer {
-    bottom: 0;
-    padding: 0.9em;
-    border-top: 1px solid black;
-  }
+  .footer-columns-container {
+    flex-direction: column;
+    width: 100%;
+}
 
-  .footer-container {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  .footer-column-2,
-  .footer-column-3 {
+.footer-column-1,
+.footer-column-2,
+.footer-column-3 {
+    width: 100%;
     text-align: center;
-  }
+}
 
-  .footer-column-1 { /* Hide sitemap in smaller screens */
-    display: none;
-  }
+.footer-column-3 address {
+    text-align: center;
+}
 
-  .social-icons a {
-    margin-right: 1rem;
-  }
+.footer-social {
+    order: 1;
+}
+
+.footer-oppening-hours {
+    order: 2;
+    margin-bottom: 1em;
+}
+
+.footer-column-3 {
+    order: 3;
+}
+
+.copyright-container {
+    order: 4;
+}
+
+.footer-column-1 {
+    display: none; /* Hide sitemap on mobiles */
+}
 }
 
 /* Notes:
 – Animación depegar nav-list en @media query
-- nav-list sticky in @media query
- */
+- Sticky nav bar not working both in large and small screens */

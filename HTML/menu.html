@@ -25,40 +25,43 @@
                 <h1>🍋 Entre Limones 🍋</h1> <!-- Place for restaurant's logo -->
             </a>
         </div>
-        <nav class="main-nav">
-            <ul class="nav-list">
-                <li class="nav-item">
-                    <a href="../index.html" class="nav-link">
-                        <i class="fas fa-home"></i>Hem
-                    </a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="./menu.html" class="nav-link dropbtn">
-                        <i class="fas fa-book-open"></i>A la carte
-                    </a>
-                    <div class="dropdown-content">
-                        <a href="./menu.html#starters">Förrätter</a>
-                        <a href="./menu.html#main-dish">Varmrätter</a>
-                        <a href="./menu.html#desserts">Desserter</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a href="./lunchbuffe.html" class="nav-link">
-                        <i class="fas fa-concierge-bell"></i>Lunchbuffé
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="./order.html" class="nav-link">
-                        <i class="fas fa-truck"></i>Beställning
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="./contact.html" class="nav-link">
-                        <i class="fas fa-envelope"></i>Kontakt
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        <div class="nav-container">
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">
+                            <i class="fas fa-home"></i>Hem
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="./menu.html" class="nav-link dropbtn" aria-expanded="false">
+                            <i class="fas fa-book-open"></i>A la carte 
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="./menu.html#starters">Förrätter</a>
+                            <a href="./menu.html#main-dish">Varmrätter</a>
+                            <a href="./menu.html#desserts">Desserter</a>
+                            <a href="./menu.html#drinks">Drycker</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./lunchbuffe.html" class="nav-link">
+                            <i class="fas fa-concierge-bell"></i>Lunchbuffé
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./order.html" class="nav-link">
+                            <i class="fas fa-truck"></i>Beställning
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./contact.html" class="nav-link">
+                            <i class="fas fa-envelope"></i>Kontakt
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
         <button class="nav-toggle" aria-label="Toggle Navigation" aria-expanded="false">
             <span class="line"></span>
             <span class="line"></span>
@@ -100,17 +103,23 @@
                 <h3>Efterrätter</h3>
                 <ul id="dessert-list"></ul>
             </div>
+
+            <div id="drinks" class="dish-container">
+                <h3>Dryckar</h3>
+                <ul id="drink-list"></ul>
+            </div>
         
         </section>
 
     </main>
 
     <footer>
-        <div class="footer-container">
 
+        <div class="footer-columns-container">  
+            
             <div class="footer-column-1">
                 <h4>Sidokarta</h4>
-                <ul class="footer-sidokarta">
+                <ul class="footer-sitemap">
                 <li><a href="../index.html">Hem</a></li>
                 <li><a href="./menu.html">A la carte</a></li>
                 <li><a href="./lunchbuffe.html">Lunchbuffé</a></li>
@@ -120,11 +129,19 @@
             </div>
     
             <div class="footer-column-2">
-                <a href="../index.html"><h4>Restaurang Entre Limones</h4></a>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                <div class="footer-social">
+                    <a href="../index.html"><h4>Restaurang Entre Limones</h4></a>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-oppening-hours">
+                    <h4>Öppettider</h4>
+                    <p>Måndag - Fredag: 11:30 - 22:00</p>
+                    <p>Lördag: 12:00 - 23:00</p>
+                    <p>Söndag: 12:30 – 21:30</p>
                 </div>
             </div>
 
@@ -149,3 +166,6 @@
 
 </body>
 </html>
+
+<!-- 
+- Different containers for starters, main dish, desserts and add drinks  -->

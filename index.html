@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/navbar-footer-styles.css">
 
-    <script src="./scripts/script.js" defer></script>
     <script src="./scripts/navbar-script.js" defer></script>
 
     <title>Restaurang Entre Limones</title>
@@ -31,9 +30,9 @@
                         <i class="fas fa-home"></i>Hem
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item dropdown">
                     <a href="./HTML/menu.html" class="nav-link">
-                        <i class="fas fa-book-open"></i>A la carte
+                        <i class="fas fa-book-open"></i>A la carte 
                     </a>
                 </li>
                 <li class="nav-item">
@@ -62,36 +61,51 @@
 
     <main>
 
-        <section class="presentation container">
+        <section class="presentation section-container">
             <h2>Välkommen till Restaurang <em>Entre Limones</em></h2>
-            <p>En smakupplevelse av Murcias unika matkultur i Karlstad.</p>
 
             <div class="flex-container">
-
                 <div class="presentation-text">
-                    <p>På <em>Entre Limones</em> möts traditionella recept med moderna influenser. Vår meny är en hyllning till denna spanska regions rika gastronomiska arv, med rätter som tillagas enligt traditionella recept och med lokala ingredienser. Från saftiga grönsaker och färsk fisk till mustiga risrätter och smakrika tapas – vi tar dig med på en smakupplevelse som speglar Murcias mångfald och passion för mat.</p>
+                    <p>
+                        En smakupplevelse av Murcias unika matkultur i Karlstad.
+                        <br><br>
+                        På <em>Entre Limones</em> möts traditionella recept med moderna influenser. 
+                        Vår meny är en hyllning till denna spanska regions rika gastronomiska arv, med rätter som tillagas enligt traditionella recept och med lokala ingredienser. 
+                        Från saftiga grönsaker och färsk fisk till mustiga risrätter och smakrika tapas – vi tar dig med på en smakupplevelse som speglar Murcias mångfald och passion för mat.
+                    </p>
                 </div>
-                <div class="presentation img-comtainer">
+                <div class="img-comtainer">
                     <img src="./media/Barraca.jpeg" alt="Bild av typisk 'barraca' från Murcia">
                 </div>
-
             </div>
 
         </section>
 
-        <section class="about-us container">
+        <section class="about-us section-container">
             <h2>Om oss</h2>
 
             <div class="flex-container">
-
-                <div class="about-us img-container">
+                <div class="img-container">
                     <img src="./media/arguinano.jpeg" alt="Bild av kökschefen, Karlos Arguiñano">
                 </div>
                 <div class="about-us-text">
-                    <p><em>Entre Limones</em> öppnade sina dörrar år 2013 i Karlstad och har sedan dess varit en favorit bland lokalbefolkningen och besökare. Vår historia började med en dröm om att skapa en plats där människor kan samlas och njuta av god mat i en avslappnad atmosfär.</p>
-                    <p>Vårt köksteam, under ledning av Karlos Arguiñano, har en gedigen erfarenhet och en passion för matlagning. Vi är stolta över att kunna erbjuda en meny som speglar vår kärlek till mat och vår respekt för traditioner.</p>
+                    <p>
+                        <em>Entre Limones</em> öppnade sina dörrar år 2013 i Karlstad och har sedan dess varit en favorit bland lokalbefolkningen och besökare. 
+                        Vår historia började med en dröm om att skapa en plats där människor kan samlas och njuta av god mat i en avslappnad atmosfär.
+                        <br>
+                        Vårt köksteam, under ledning av Karlos Arguiñano, har en gedigen erfarenhet och en passion för matlagning. 
+                        Vi är stolta över att kunna erbjuda en meny som speglar vår kärlek till mat och vår respekt för traditioner.
+                    </p>
                 </div>
+            </div>
 
+            <div class="flex-container">
+                <div class="about-us-text">
+                    <p>Vår huvudservitör och sommelier, Miguel Maldonado, kommer att förbättra din matupplevelse med sin omfattande vinkunskap och förtjusande "chascarrillos".</p>
+                </div>
+                <div class="img-container">
+                    <img src="./media/maldonado.jpeg" alt="Bild av sommelier, Miguel Maldonado">
+                </div>
             </div>
 
         </section>
@@ -99,11 +113,12 @@
     </main>
 
     <footer>
-        <div class="footer-container">
 
+        <div class="footer-columns-container">  
+            
             <div class="footer-column-1">
                 <h4>Sidokarta</h4>
-                <ul class="footer-sidokarta">
+                <ul class="footer-sitemap">
                 <li><a href="./index.html">Hem</a></li>
                 <li><a href="./HTML/menu.html">A la carte</a></li>
                 <li><a href="./HTML/lunchbuffe.html">Lunchbuffé</a></li>
@@ -113,11 +128,19 @@
             </div>
     
             <div class="footer-column-2">
-                <a href="./index.html"><h4>Restaurang Entre Limones</h4></a>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                <div class="footer-social">
+                    <a href="./index.html"><h4>Restaurang Entre Limones</h4></a>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-oppening-hours">
+                    <h4>Öppettider</h4>
+                    <p>Måndag - Fredag: 11:30 - 22:00</p>
+                    <p>Lördag: 12:00 - 23:00</p>
+                    <p>Söndag: 12:30 – 21:30</p>
                 </div>
             </div>
 

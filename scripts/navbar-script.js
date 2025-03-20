@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Toggle code
+
+// Toggle code – "Hamburger"
 const navToggle = document.querySelector('.nav-toggle');
 const mainNav = document.querySelector('.main-nav');
 

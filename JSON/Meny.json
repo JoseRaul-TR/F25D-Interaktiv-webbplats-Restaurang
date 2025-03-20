@@ -266,6 +266,43 @@
                 "allergier": "Laktos/Sulfiter/Gluten.",
                 "pris": "64"
             }
+        ],
+        "drinks": [
+            {
+                "namn": "Läsk",
+                "allergier": null,
+                "pris": "30"
+            },
+            {
+                "namn": "Färskpressad apelsinjuice",
+                "allergier": null,
+                "pris": "45"
+            },
+            {
+                "namn": "Husets vin (glas)",
+                "allergier": null,
+                "pris": "60"
+            },
+            {
+                "namn": "Husets vin (flaska)",
+                "allergier": null,
+                "pris": "250"
+            },
+            {
+                "namn": "Öl",
+                "allergier": null,
+                "pris": "50"
+            },
+            {
+                "namn": "Kaffe",
+                "allergier": null,
+                "pris": "35"
+            },
+            {
+                "namn": "Te",
+                "allergier": null,
+                "pris": "35"
+            }
         ]
     }
 }

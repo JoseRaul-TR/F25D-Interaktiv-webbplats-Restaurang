@@ -9,6 +9,7 @@ async function loadMenu() {
         const riceList = document.getElementById('rice-list');
         const meatList = document.getElementById('meat-list');
         const dessertList = document.getElementById('dessert-list');
+        const drinkList = document.getElementById('drink-list');
 
         // Function to create the dish list
         function createDishList(categoryData, container = '') {
@@ -79,6 +80,18 @@ async function loadMenu() {
     } catch (error) { //Error handling
         console.log("Error processing desserts: ", error);
     }
+
+    // Fill in the drinks
+    try {
+        if (data.menu.drinks) {
+            createDishList(data.menu.drinks, drinkList);
+        } else {
+            console.log("Desserts category missing or empty.");
+        }
+    } catch (error) { //Error handling
+        console.log("Error processing drinks: ", error);
+    }
+    
     } catch (error) { //Error handling of the entire code 
         console.error("Error loading the menu: ", error);
     }
