@@ -15,11 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Toggle code – "Hamburger"
 const navToggle = document.querySelector('.nav-toggle');
-const mainNav = document.querySelector('.main-nav');
+const navMenu = document.querySelector('.nav-menu');
 
 navToggle.addEventListener('click', () => {
     navToggle.classList.toggle('active'); // Toggle 'active'
-    mainNav.classList.toggle('active'); // Toggle main-nav
+    navMenu.classList.toggle('active');
     navToggle.setAttribute('aria-expanded', mainNav.classList.contains('active'));//toggle aria-expanded
 });
 
@@ -39,13 +39,13 @@ function toggleTheme(isDark) {
         localStorage.setItem('theme', 'light');
     }
 }
-/* 
+
     // Check for saved theme preference
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'dark') {
             checkbox.checked = true;
             toggleTheme(true);
-        } */
+        }
 
 // Event listener for theme switch
 checkbox.addEventListener('change', (e) => {

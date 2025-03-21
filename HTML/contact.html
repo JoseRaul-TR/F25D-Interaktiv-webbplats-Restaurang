@@ -19,45 +19,40 @@
 <body>
 
     <header class="header">
-        <div class="logo-container">
-            <a href="../index.html">
-                <h1>🍋 Entre Limones 🍋</h1> <!-- Place for restaurant's logo -->
-            </a>
-        </div>
-        <nav class="main-nav">
-            <ul class="nav-list">
-                <li class="nav-item">
-                    <a href="../index.html" class="nav-link">
-                        <i class="fas fa-home"></i>Hem
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="./menu.html" class="nav-link">
-                        <i class="fas fa-book-open"></i>A la carte
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="./lunchbuffe.html" class="nav-link">
-                        <i class="fas fa-concierge-bell"></i>Lunchbuffé
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="./order.html" class="nav-link">
-                        <i class="fas fa-truck"></i>Beställning
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="./contact.html" class="nav-link">
-                        <i class="fas fa-envelope"></i>Kontakt
-                    </a>
-                </li>
-            </ul>
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="../index.html" class="nav-brand">
+                    <h1>🍋 Entre Limones 🍋</h1> <!-- Place for restaurant's logo -->
+                </a>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="../HTML/menu.html" class="nav-link">
+                            <i class="fas fa-book-open"></i>A la carte 
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../HTML/lunchbuffe.html" class="nav-link">
+                            <i class="fas fa-concierge-bell"></i>Lunchbuffé
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../HTML/order.html" class="nav-link">
+                            <i class="fas fa-truck"></i>Beställning
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../HTML/contact.html" class="nav-link">
+                            <i class="fas fa-envelope"></i>Kontakt
+                        </a>
+                    </li>
+                </ul>
+                <button class="nav-toggle">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+            </div>
         </nav>
-        <button class="nav-toggle" aria-label="Toggle Navigation" aria-expanded="false">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-        </button>
     </header>
 
     <main>
@@ -138,7 +133,6 @@
         <div class="copyright-container">
             <p>&copy; <span id="copyright-year"></span> – José Raúl Tenza Ramírez<br>All rights reserved</p>
         </div>
-        
     </footer>
 
 </body>

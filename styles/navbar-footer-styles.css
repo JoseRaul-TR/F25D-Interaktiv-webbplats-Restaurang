@@ -1,34 +1,20 @@
 /* –––––––– Navbar –––––––––––––– */
 .header{
-  display: flex;
-  flex-direction: column;
+  width: 100%;
   background-color: transparent;
   backdrop-filter: blur(10px);
-  width: 100%;
-  position: relative;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.header .logo-container{
-  width: 100%;
-  text-align: center;
-  padding: 1em 0;
-}
-
-.logo-container a {
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #ab8402;
-}
-
-.logo-container a:hover {
-  color: #ffc400;
-  transition: color 0.3s ease;
-}
-
-.main-nav {
-  width: 100%;
+.nav-container {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: .5em;
 }
 
 .main-nav.active {
@@ -43,25 +29,27 @@
   z-index: 10;
 }
 
-.nav-list {
-  width: 100%;
-  display: grid;
+.nav-brand {
+  color: #ab8402;
+  text-decoration: none;
+}
+
+.nav-brand:hover {
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffc400;
+  transition: color 0.3s ease;
+}
+
+.nav-menu {
   list-style: none;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 1fr;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-  justify-content: space-between;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-item {
-  text-align: center;
-  border-right: 1px solid #000;
-  position: relative;
-}
-
-.nav-item:last-child {
-  border-right: none;
+  margin-left: 1.5em;
 }
 
 .nav-link {
@@ -91,6 +79,17 @@
 
 .nav-toggle {
   display: none; /* Default hidden */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-toggle .line {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  border-radius: 2px;
 }
 
 /* ––––––––– Footer ––––––––––––– */
@@ -103,7 +102,7 @@ footer {
   bottom: 0;
   width: 100%;
   z-index: 100;
-  border-top: 1px solid #000;
+  box-shadow: 0 -4px 5px rgba(0, 0, 0, 0.2);
 }
 
 .footer-columns-container {
@@ -214,103 +213,56 @@ footer h4 {
   margin-top: 1em;
 }
 
-/* Theme Switch Styles */
-.theme-switch-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1em 0;
-}
-
-.theme-switch {
-  display: inline-block;
-  height: 34px;
-  position: relative;
-  width: 60px;
-}
-
-.theme-switch input {
-  display: none;
-}
-
-.slider {
-  background-color: #ccc;
-  bottom: 0;
-  cursor: pointer;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: .4s;
-}
-
-.slider:before {
-  background-color: white;
-  bottom: 4px;
-  content: "";
-  height: 26px;
-  left: 4px;
-  position: absolute;
-  transition: .4s;
-  width: 26px;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:checked + .slider:before {
-  transform: translateX(26px);
-}
-
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-
 /* –––––––––––– Responsive adjustments ––––––––––––––– */
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
-  .header {
-    width: 100%;
-  }
-
-  .logo-container {
-    width: 100%;
-    display: flex;
+  .nav-container {
     justify-content: center;
+    position: relative;
   }
-
-  .nav-list {
-    display: none; /* Hidden for samll screens */
-    transform: translateY(-100%); /* Initial off-screen position */
-    opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+  
+  .nav-brand {
+    text-align: center;
+    width: 100%;
   }
-
-  .main-nav.active .nav-list {
-    display: flex;
+  
+  .nav-menu {
     flex-direction: column;
     width: 100%;
-    transform: translateY(0); /* Bring menu into view */
-    opacity: 1; /* Make menu visible */
+    text-align: center;
+    display: none;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    z-index: 102;
+    position: absolute;
+    top: 100%;
     background-color: transparent;
+    color: inherit;
     backdrop-filter: blur(10px);
+  }
+
+  .nav-menu.active {
+    display: flex;
+    transform: translateY(0);
   }
 
   .nav-item {
     border-bottom: 1px solid #000;
+    width: 100%;
+    margin: 0;
+    text-align: center;
   }
 
-  .nav-item:last-child {
-    border-bottom: none;
+  .nav-item:first-of-type{
+    border-top: 1px solid #000;
   }
-  
+
+  .navlink {
+    display: block;
+    padding: .9em 0;
+  }
+
   .nav-link.current{
     color: #ab8402;
     text-decoration: underline;
@@ -318,27 +270,22 @@ input:checked + .slider:before {
   }
   
   .nav-toggle {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    width: 25px;
-    height: 20px;
-    position: fixed;
-    left: 15px;
-    top: 20px;
-    z-index: 11;
+    display: block;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    z-index: 101;
   }
 
   .nav-toggle .line {
-    width: 100%;
-    height: 3px;
-    background-color: #000;
-    border-radius: 2px;
-    transition: all 0.3s ease;
+    width: 30px;
+    height: 4px;
+    margin: 6px auto;
+  }
+
+  .nav-menu.active {
+    display: flex;
   }
 
   /* Hamburger to X animation */
@@ -346,6 +293,7 @@ input:checked + .slider:before {
   .nav-toggle.active .line:nth-child(1) {
     transform: rotate(45deg);
     transform-origin: top left;
+    transition: transform 0.3s ease;
   }
 
   .nav-toggle.active .line:nth-child(2) {
@@ -355,6 +303,7 @@ input:checked + .slider:before {
   .nav-toggle.active .line:nth-child(3) {
     transform: rotate(-45deg);
     transform-origin: bottom left;
+    transition: transform 0.3s ease;
   }
 
   /* Footer */
@@ -402,67 +351,15 @@ input:checked + .slider:before {
   header,
   footer {
     color: #e0e0e0;
-}
-}
-/* Theme Switch Styles */
-.theme-switch-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1em 0;
-}
+  }
 
-.theme-switch {
-  display: inline-block;
-  height: 34px;
-  position: relative;
-  width: 60px;
-}
-
-.theme-switch input {
-  display: none;
-}
-
-.slider {
-  background-color: #ccc;
-  bottom: 0;
-  cursor: pointer;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: .4s;
-}
-
-.slider:before {
-  background-color: white;
-  bottom: 4px;
-  content: "";
-  height: 26px;
-  left: 4px;
-  position: absolute;
-  transition: .4s;
-  width: 26px;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:checked + .slider:before {
-  transform: translateX(26px);
-}
-
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
+  .nav-toggle .line{
+    background-color: #888;
+  }
 }
 
 
 /* Notes:
 – Animación depegar nav-list en @media query
-- Sticky nav bar not working both in large and small screens 
-– Keep working in light/dark theme selector */
+– Keep working in light/dark theme selector
+- In small screen media query make restaurant name to always display  */
