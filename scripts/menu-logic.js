@@ -1,3 +1,32 @@
+// Logic for the filter buttons
+
+const filterButtons = document.querySelectorAll('.filter-btn');
+const dishContainers = document.querySelectorAll('.dish-container');
+
+//Hide all dish containers initially
+dishContainers.forEach(container => {
+    container.style.display = 'none';
+});
+
+// Filter buttons logic
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const category = button.dataset.category;
+        console.log("Button clicked: ", category); // Check clicked category
+
+        dishContainers.forEach(container => {
+            console.log("Container category: ", container.dataset.category); // Check container category
+            if (category === 'all' || container.dataset.category === category) {
+                container.style.display = 'block';
+            } else {
+                container.style.display = 'none';
+            }
+        });
+    });
+});
+
+// –––––––– ************** ––––––––––––––––––––––––
+
 // Async function to load the menu from a JSON file
 async function loadMenu() {
     try {

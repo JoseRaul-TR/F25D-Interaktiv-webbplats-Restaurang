@@ -1,3 +1,13 @@
+// Button "Visa veckans menyn" logic
+const toggleMenuBtn = document.getElementById('toggle-menu-btn');
+const weeklyMenu = document.querySelector('.weekly-menu');
+
+toggleMenuBtn.addEventListener('click', () => {
+    weeklyMenu.classList.toggle('visible');
+    toggleMenuBtn.textContent = weeklyMenu.classList.contains('visible') ? 'Dölj Dagens Meny' : 'Visa Dagens Meny';
+    });
+
+//Logic to load the weekly menu from a JSON file
 async function fetchLunchData() {
     try {
         const response = await fetch('../JSON/Lunchbuffe.json'); // Fetch the data from JSON Lunchbuffe
@@ -23,9 +33,9 @@ async function fetchLunchData() {
         data.dailyMenu.forEach(item => {
             const menuItem = document.createElement('li');
             menuItem.innerHTML = `<strong>${item.day}:</strong><br>
-                                    Förrät: ${item.starter}<br>
-                                    Huvudrätt: ${item.mainDish}<br>
-                                    Dessert: ${item.dessert}`;
+                                    <strong>Förrät:</strong> ${item.starter}<br>
+                                    <strong>Huvudrätt:</strong> ${item.mainDish}<br>
+                                    <strong>Dessert:</strong> ${item.dessert}`;
             menuList.appendChild(menuItem);
         });
 

@@ -57,44 +57,51 @@
 
     <main>
 
-        <section class="menu">
-            <h2>A la carte</h2>
-            
-            <div id="starters" class="dish-container">
-                <h3>Förrätter</h3>
-                <ul id="starters-list"></ul>
-            </div>
-
-            <div id="main-dish" class="dish-container">
-                <h3>Varmrätter</h3>
-
-                <div id="fish-section">
-                    <h4>Fiskrätter:</h4>
-                    <ul id="fish-list"></ul>
-                </div>
-
-                <div id="rice-section">
-                    <h4>Risrätter:</h4>
-                    <ul id="rice-list"></ul>
-                </div>
-
-                <div id="meat-section">
-                    <h4>Kötträtter:</h4>
-                    <ul id="meat-list"></ul>
-                </div>
-            </div>
-
-            <div id="desserts" class="dish-container">
-                <h3>Efterrätter</h3>
-                <ul id="dessert-list"></ul>
-            </div>
-
-            <div id="drinks" class="dish-container">
-                <h3>Dryckar</h3>
-                <ul id="drink-list"></ul>
-            </div>
+    <section class="menu">
+        <h2>A la carte</h2>
         
-        </section>
+        <div id="filter-container">
+            <button class="filter-btn" data-category="all">Alla</button>
+            <button class="filter-btn" data-category="starters">Förrätter</button>
+            <button class="filter-btn" data-category="main-dish">Varmrätter</button>
+            <button class="filter-btn" data-category="desserts">Efterrätter</button>
+            <button class="filter-btn" data-category="drinks">Drycker</button>
+        </div>
+        
+        <div id="starters" class="dish-container" data-category="starters">
+            <h3>Förrätter</h3>
+            <ul id="starters-list"></ul>
+        </div>
+        
+        <div id="main-dish" class="dish-container" data-category="main-dish">
+            <h3>Varmrätter</h3>
+            
+            <div id="fish-section">
+                <h4>Fiskrätter:</h4>
+                <ul id="fish-list"></ul>
+            </div>
+            
+            <div id="rice-section">
+                <h4>Risrätter:</h4>
+                <ul id="rice-list"></ul>
+            </div>
+            
+            <div id="meat-section">
+                <h4>Kötträtter:</h4>
+                <ul id="meat-list"></ul>
+            </div>
+        </div>
+        
+        <div id="desserts" class="dish-container" data-category="desserts">
+            <h3>Efterrätter</h3>
+            <ul id="dessert-list"></ul>
+        </div>
+        
+        <div id="drinks" class="dish-container" data-category="drinks">
+            <h3>Dryckar</h3>
+            <ul id="drink-list"></ul>
+        </div>
+    </section>
 
     </main>
 

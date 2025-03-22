@@ -20,37 +20,8 @@ const navMenu = document.querySelector('.nav-menu');
 navToggle.addEventListener('click', () => {
     navToggle.classList.toggle('active'); // Toggle 'active'
     navMenu.classList.toggle('active');
-    navToggle.setAttribute('aria-expanded', mainNav.classList.contains('active'));//toggle aria-expanded
+    navToggle.setAttribute('aria-expanded', navMenu.classList.contains('active'));//toggle aria-expanded
 });
 
 //Get year for copyright footprint
 document.getElementById("copyright-year").innerHTML = new Date().getFullYear();
-
-//Light/Dark theme selector
-const checkbox = document.getElementById('checkbox');
-
-// Function to toggle light/dark theme
-function toggleTheme(isDark) {
-    if (isDark) {
-        document.body.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-    } else {
-        document.body.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
-    }
-}
-
-    // Check for saved theme preference
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
-            checkbox.checked = true;
-            toggleTheme(true);
-        }
-
-// Event listener for theme switch
-checkbox.addEventListener('change', (e) => {
-    toggleTheme(e.target.checked);
-});
-
-// Add class for javascript enabled.
-document.body.classList.add('js-enabled');

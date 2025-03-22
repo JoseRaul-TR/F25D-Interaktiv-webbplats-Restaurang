@@ -17,17 +17,17 @@ body {
 main {
     width: 100%;
     display: flex;
-    justify-content: space-around;
     flex-direction: column;
+    align-items: center;
 }
 
 /* –––––––––– */
 
-.contact-form {
+section {
     width: 85%;
     max-width: 1200px;
-    margin: 4em auto;
-    padding: 3em;
+    margin: 2em auto;
+    padding: 2em;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -38,22 +38,62 @@ h2 {
     padding-bottom: 1em;
     text-align: center;
     font-size: 2em;
-    width: 100%;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+}
+
+.contact-details,
+#contactForm {
+    flex: 1 1 300px;
+}
+
+.address-info,
+.oppening-hours {
+    margin-bottom: 2em;
+}
+
+h3, h4 {
+    margin-bottom: .5em;
+}
+
+.address-info p,
+.oppening-hours p {
+    margin-bottom: 0.5em;
+}
+
+.address-info a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.address-info a:hover {
+    color: #ffc400;
+    cursor: pointer;
+}
+
+.address-info a i {
+    margin-right: 0.5em;
 }
 
 .form-group {
-    padding-bottom: 1.2em;
+    padding-bottom: 1.5em;
 }
 
 .form-group label {
     display: block;
-    padding-bottom: 0.7em;
+    padding-bottom: 0.5em;
+    font-weight: bold;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: .9em;
+    padding: 1em;
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
@@ -65,23 +105,85 @@ h2 {
 
 .error-message {
     color: red;
-    font-size: 0.8em;
-    padding-top: .7em;
+    font-size: 0.9em;
+    padding-top: .5em;
 }
 
 .submit-btn {
-    background-color: #ab8402;
-    color: white;
-    padding: .9 1.1em;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 25%;
-    height: 3em;
+    background-color: transparent;
+    color: inherit;
+    margin: 1em auto 0;
+    padding: 1em 1.5em;
+    border: 1px solid #ab8402;
+    border-radius: 5px;
+    width: auto;
+    font-size: 1em;
+    transition: all 0.3s ease;
 }
 
 .submit-btn:hover {
-    background-color: #ffc400;
+    background-color: #ab8402;
+    color: #fff;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+}
+
+.submit-btn:active {
+    background-color: #ffc400;
+    border-color: #ffc400;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .submit-btn {
+        width: 100%;
+        background-color: #ab8402;
+        color: #fff;
+        margin: 1em auto 0;
+        padding: 1em 1.5em;
+        border: 1px solid #ab8402;
+        border-radius: 5px;
+        font-size: 1em;
+        transition: all 0.3s ease;
+    }
+    
+    .submit-btn:active {
+        background-color: #ffc400;
+        border-color: #ffc400;
+    }
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1e1e1e;
+        color: #e0e0e0;
+    }
+    .contact-form {
+        background-color: #121212;
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    }
+
+    .contact-form h2,
+    .address-info h3,
+    .oppening-hours h4,
+    .form-group label {
+        color: #e0e0e0;
+    }
+
+    .address-info p,
+    .oppening-hours p,
+    .form-group input,
+    .form-group textarea {
+        color: #e0e0e0;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        background-color: #333;
+        border: 1px solid #555;
+    }
 }

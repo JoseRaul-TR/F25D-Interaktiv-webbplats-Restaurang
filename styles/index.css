@@ -21,20 +21,20 @@ main {
     flex-direction: column;
 }
 
-/* –––––––––– */
-
 section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
+    width: 85%;
     max-width: 1200px;
     margin: 2em auto 0 auto;
-    padding-top: 1em;
+    padding: 1em;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* –––––––––– */
 
 section:last-of-type {
     margin-bottom: 2em;
@@ -50,6 +50,7 @@ h2 {
 
 p {
     line-height: 1.7;
+    text-align: justify;
 }
 
 em {
@@ -67,11 +68,6 @@ em {
     justify-content: space-around;
     align-items: flex-start;
     width: 100%;
-    padding-bottom: 1em;
-}
-
-.flex-container:last-of-type {
-    padding-bottom: none;
 }
 
 .presentation-text {
@@ -89,6 +85,7 @@ em {
 .img-container {
     width: 35%;
     align-self: center;
+    padding-top: 1em;
 }
 
 img {
@@ -100,6 +97,10 @@ img {
 
 /* Responsiv design */
 @media (max-width: 768px) {
+    section {
+        padding: 1em;
+    }
+
     .section-container {
         width: 90%;
         padding: 1.3em;
@@ -113,11 +114,6 @@ img {
     .about-us-text,
     .img-container {
         width: 100%;
-    }
-
-    .presentation-text,
-    .about-us-text {
-        padding-bottom: 1em;
     }
 }
 

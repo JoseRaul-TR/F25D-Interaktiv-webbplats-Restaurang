@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/order.css">
     <link rel="stylesheet" href="../styles/navbar-footer-styles.css">
 
     <script src="../scripts/order.js" defer></script>
@@ -57,42 +57,57 @@
 
     <main>
 
-        <div class="order-container">
+        <section class="order-container">
             <h2>Beställa</h2>
             <p>Här kan du beställa rätter från vår meny för att hämta själv eller levereras hem till dig.</p>
 
             <form id="orderForm">
 
-                <div class="dish-group" data-category="starter">
-                    <label for="starterSelect">Förrätter:</label>
-                    <select id="starterSelect" name="starter"></select>
-                    <input type="number" id="starterQuantity" name="starterQuantity" value="0">
-                    <button type="button" class="addItem">Lägg till</button>
-                </div>
-
-                <div class="dish-group" data-category="mainDish">
-                    <label for="mainDishSelect">Varmrätter:</label>
-                    <select id="mainDishSelect" name="mainDish"></select>
-                    <input type="number" id="mainDishQuantity" name="mainDishQuantity" value="0">
-                    <button type="button" class="addItem">Lägg till</button>
+                <div class="dish-selection-container">
+                    <div class="dish-group" data-category="starter">
+                        <label for="starterSelect">Förrätter:</label>
+                        <select id="starterSelect" name="starter"></select>
+                        <label for="starterQuantity">Antal:</label>
+                        <input type="number" id="starterQuantity" name="starterQuantity" value="0">
+                        <button type="button" class="addItem">Lägg till</button>
+                    </div>
+                    <div class="dish-group" data-category="mainDish">
+                        <label for="mainDishSelect">Varmrätter:</label>
+                        <select id="mainDishSelect" name="mainDish"></select>
+                        <label for="mainDishQuantity">Antal:</label>
+                        <input type="number" id="mainDishQuantity" name="mainDishQuantity" value="0">
+                        <button type="button" class="addItem">Lägg till</button>
+                    </div>
+                    <div class="dish-group" data-category="dessert">
+                        <label for="dessertSelect">Efterrätter:</label>
+                        <select id="dessertSelect" name="dessert"></select>
+                        <label for="dessertQuantity">Antal:</label>
+                        <input type="number" id="dessertQuantity" name="dessertQuantity" value="0">
+                        <button type="button" class="addItem">Lägg till</button>
+                    </div>
+                    <div class="dish-group" data-category="drink">
+                        <label for="drinkSelect">Dryckar:</label>
+                        <select id="drinkSelect" name="drink"></select>
+                        <label for="drinkQuantity">Antal:</label>
+                        <input type="number" id="drinkQuantity" name="drinkQuantity" value="0">
+                        <button type="button" class="addItem">Lägg till</button>
+                    </div>
                 </div>
     
-                <div class="dish-group" data-category="dessert">
-                    <label for="dessertSelect">Efterrätter:</label>
-                    <select id="dessertSelect" name="dessert"></select>
-                    <input type="number" id="dessertQuantity" name="dessertQuantity" value="0">
-                    <button type="button" class="addItem">Lägg till</button>
+                <div class="client-input-container">
+                    <div class="name-container">
+                        <label for="name">Namn:</label>
+                        <input type="text" id="name" name="name">
+                    </div>
+                    <div class="name-container">
+                        <label for="phone">Telefonnummer:</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                        <div class="name-container">
+                        <label for="email">E-postadress:</label>
+                        <input type="email" id="email" name="email">
+                    </div>
                 </div>
-    
-                <div class="dish-group" data-category="drink">
-                    <label for="drinkSelect">Dryckar:</label>
-                    <select id="drinkSelect" name="drink"></select>
-                    <input type="number" id="drinkQuantity" name="drinkQuantity" value="0">
-                    <button type="button" class="addItem">Lägg till</button>
-                </div>
-    
-                <label for="name">Ditt namn:</label>
-                <input type="text" id="name" name="name" required>
     
                 <div id="totalPriceDisplay">
                     <strong>Din beställning:</strong>
@@ -100,13 +115,13 @@
                     <strong>Totalpriset är:</strong> <span id="totalPrice">0</span> kr
                 </div>
     
-                <button type="submit">Beställ</button>
+                <button type="submit">Beställa</button>
             </form>
             <div id="orderConfirmation" style="display: none;">
                 <p>Din beställning har lagts!</p>
             </div>
 
-        </div>
+        </section>
 
     </main>
 

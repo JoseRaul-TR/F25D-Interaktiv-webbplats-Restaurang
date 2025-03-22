@@ -22,16 +22,49 @@ main {
 
 /* –––––––––– */
 
-.menu {
+section {
     display: flex;
     flex-direction: column;
     width: 85%;
     max-width: 1200px;
     margin: 2em auto;
-    padding: 0 3em;
+    padding: 1em 3em;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+#filter-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.filter-btn {
+    padding: 10px 15px;
+    background-color: transparent;
+    color: inherit;
+    border: 1px solid #ab8402;
+    border-radius: 5px;
+    font-size: 16px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    color: #fff;
+    cursor: pointer;
+    background-color: #ab8402;
+}
+
+.filter-btn:active {
+    background-color: #ffc400;
+    border-color: #ffc400;
+}
+
 
 .menu h2 {
     color: #9a2130;
@@ -39,15 +72,6 @@ main {
     text-align: center;
     padding-bottom: 1em;
     font-size: 2em;
-}
-
-.dish-container {
-    padding-bottom: 2em;
-    border-bottom: 1px solid #bcbaba;
-}
-
-.dish-container:last-of-type {
-    border-bottom: none;
 }
 
 .dish-container h3 {
@@ -87,7 +111,7 @@ ul {
 /* Responsiv design */
 @media (max-width: 768px){
     .menu {
-        padding: 0 1em;
+        padding: 1em;
     }
 }
 
@@ -102,10 +126,4 @@ ul {
         background-color: #121212;
         box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
     }
-
-    .dish-container {
-        border-bottom: 1px solid #444; /* Darker border */
-    }
 }
-
-/* Change layout to have differetiate visual sections for the different di */

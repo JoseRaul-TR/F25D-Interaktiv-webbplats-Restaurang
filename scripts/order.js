@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Array to store ordered items
     let orderItems = [];
 
-    // Function to load menu data from JSON
+    // Load menu data and setup from JSON
     async function loadMenu() {
         try {
             // Fetch and parse menu data
@@ -161,18 +161,55 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load menu data when DOM is ready
     loadMenu();
 
-    // Event listener for form submission
-    orderForm.addEventListener('submit', (event) => {
+    // Combined validation for phone/email and name
+    orderForm.addEventListener('submit', function(event) {
+        const nameInput = document.getElementById('name');
+        const phoneInput = document.getElementById('phone');
+        const emailInput = document.getElementById('email');
+
+        // Name validation
+        if (!nameInput.value) {
+            alert('Ange ditt namn.');
+            event.preventDefault();
+            return;
+        } 
+        
+        // Phone or email validation
+        if (!phoneInput.value || !emailInput.value) {
+            alert('Ange ditt telefonnummer eller e-post.');
+            event.preventDefault();
+            return;
+        }
+
+        //Validation of email format
+        if (emailInput.value) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailInput.value)) {
+                alert('Ogiltig e-postadress.');
+                event.preventDefault();
+                return;
+            }
+        }
+
+        // If all validations pass, proceed with order submission
         event.preventDefault();
-        // Create order object from ordered items and customer name
+
         const order = {
             items: orderItems,
-            name: document.getElementById('name').value,
+            name: nameInput.value,
+            phone: phoneInput.value,
+            email: emailInput.value
         };
-        // Log order data to console
+
         console.log('Order:', order);
-        // Hide form and show order confirmation message
         orderForm.style.display = 'none';
         orderConfirmation.style.display = 'block';
     });
 });
+
+/* 
+
+**** Notes: *******
+
+- Not all the dishes can't be added to the order.
+*/
