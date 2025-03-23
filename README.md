@@ -1,39 +1,14 @@
 # Interactive website – Restaurant
 
-This is a simulated website for a Restaurant containing som intereactivity.
+This is a simulated website for a restaurant, designed to provide an interactive experience for users. It showcases a digital menu, a weekly special menu, has online ordering capabilities from the digital menu and contact functionalities.
 
-![Project Screenshot or GIF (Optional)](./path/to/screenshot.png)
+The menu and the lunch weekly menu are stored in two differents JSON files, with the purpose of easier mantenience. 
 
-## Table of Contents
-
-- [About the Project](#about-the-project)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-
-## About the Project
-
-Provide a more detailed description of your project. Explain its purpose, features, and the problem it solves.
+![Project Screenshot](./Restaurant-screenshot.png)
 
 **Key Features:**
 
-- Feature 1
-- Feature 2
-- Feature 3
-
-## Getting Started
-
-Instructions on how to get your project running locally.
-
-### Prerequisites
-
-List any software or dependencies required to run your project.
-
-```bash
-# Example
-Node.js (v14 or higher)
-npm or yarn
+- Light / Dark Theme
+- Mobile Responsive
+- User input validation both in order and contact
+- JS to fetch data from JSON files a populate HTML

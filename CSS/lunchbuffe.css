@@ -95,12 +95,12 @@ h3 {
     height: auto;
 }
 
-ul#daily-menu {
+ul#weekly-menu-list {
     list-style: none;
     padding: 0;
 }
 
-ul#daily-menu li {
+ul#weekly-menu-list li {
     border-bottom: 1px solid #ab8402;
     padding: 10px 0;
     text-align: center;

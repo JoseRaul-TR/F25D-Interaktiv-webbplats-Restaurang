@@ -11,20 +11,23 @@
         }
     },
 
-    "dailyMenu": [
-        {
-            "day": "Måndag - Fredag",
-            "starter": "Traditionell 'gazpacho', murciansk 'zarangollo' (ägg med grönsaker) eller husets sallad.",
-            "mainDish": "Ris med magert kött och revben, Torskbit med aioli eller kanin 'al ajillo' (med vitlök).",
-            "dessert": "Säsongens frukt, risgrynsgröt, 'natillas de la huerta' (vaniljkräm) eller kaffe."
-        },
-        {
-            "day": "Söndag",
-            "starter": "Mulle-rom, mojama (tonfisk) från almadraba och Marcona-mandlar.",
-            "mainDish": "Ris med kanin och sniglar.",
-            "dessert": "Säsongens frukt, 'paparajote' (citronblad med deg), risgrynsgröt, 'natillas de la huerta' (vaniljkräm) eller kaffe."
-        }
-    ],
+    "weekMenu": {
+        "weekNumber": 42,
+        "menu": [
+            {
+                "day": "Måndag - Fredag",
+                "starter": "Traditionell 'gazpacho', murciansk 'zarangollo' (ägg med grönsaker) eller husets sallad.",
+                "mainDish": "Ris med magert kött och revben, Torskbit med aioli eller kanin 'al ajillo' (med vitlök).",
+                "dessert": "Säsongens frukt, risgrynsgröt, 'natillas de la huerta' (vaniljkräm) eller kaffe."
+            },
+            {
+                "day": "Söndag",
+                "starter": "Mulle-rom, mojama (tonfisk) från almadraba och Marcona-mandlar.",
+                "mainDish": "Ris med kanin och sniglar.",
+                "dessert": "Säsongens frukt, 'paparajote' (citronblad med deg), risgrynsgröt, 'natillas de la huerta' (vaniljkräm) eller kaffe."
+            }
+        ]
+    },
 
     "drinks": {
         "included": "Vatten",
