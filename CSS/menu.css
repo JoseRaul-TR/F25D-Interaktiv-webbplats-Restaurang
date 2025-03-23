@@ -1,3 +1,8 @@
+:root {
+    --headers-font: "Montserrat", sans-serif;
+    --text-font: "Raleway", sans-serif;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,7 +10,7 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: var(--text-font);
     line-height: 1.6;
     background-color: #f9f9f9;
     color: #333;
@@ -55,18 +60,19 @@ section {
 }
 
 .filter-btn:hover {
-    color: #fff;
+    color:#fff;
     cursor: pointer;
     background-color: #ab8402;
 }
 
 .filter-btn:active {
     background-color: #ffc400;
-    border-color: #ffc400;
+    border-color:#ffc400;
 }
 
 
-.menu h2 {
+section h2 {
+    font-family: var(--headers-font);
     color: #9a2130;
     width: 100%;
     text-align: center;

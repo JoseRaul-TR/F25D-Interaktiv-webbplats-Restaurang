@@ -1,11 +1,16 @@
- * {
+:root {
+    --headers-font: "Montserrat", sans-serif;
+    --text-font: "Raleway", sans-serif;
+}
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: var(--text-font);
     line-height: 1.6;
     background-color: #f9f9f9;
     color: #333;
@@ -41,6 +46,7 @@ section:last-of-type {
 }
 
 h2 {
+    font-family: var(--headers-font);
     color: #9a2130;
     padding-bottom: 1em;
     text-align: center;
@@ -48,7 +54,7 @@ h2 {
     width: 100%;
 }
 
-p {
+section p {
     line-height: 1.7;
     text-align: justify;
 }

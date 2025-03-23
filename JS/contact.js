@@ -47,8 +47,6 @@ function validateForm() {
         // Form is valid, show popup
         alert("Ditt meddelande har skickats.");
 
-       
-
         return true; // Allows form submission
     } else {
         console.log("Form validation failed.");

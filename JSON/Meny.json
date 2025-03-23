@@ -27,12 +27,12 @@
                 "pris": "207"
             },
             {
-                "namn": "Parmesanbitar med \"regañinas\" (kex).",
+                "namn": "Parmesanbitar med 'regañinas' (kex).",
                 "allergier": "Nötter/Mjölk.",
                 "pris": "173"
             },
             {
-                "namn": "\"Caballito\" med sammet av citron (friterad räka).",
+                "namn": "'Caballito' med sammet av citron (friterad räka).",
                 "allergier": "Kräftdjur/Gluten.",
                 "pris": "32"
             },
@@ -67,7 +67,7 @@
                 "pris": "41"
             },
             {
-                "namn": "\"Patatas asas\" (ungbakad potatis) med vitlök. 6 styck.",
+                "namn": "'Patatas asas' (ungbakad potatis) med vitlök. 6 styck.",
                 "allergier": "Mjölk.",
                 "pris": "92"
             },
@@ -77,7 +77,7 @@
                 "pris": "161"
             },
             {
-                "namn": "Delad tomat med \"piparras\" (spansk peppar) och tonfisk.",
+                "namn": "Delad tomat med 'piparras' (spansk peppar) och tonfisk.",
                 "allergier": "Fisk.",
                 "pris": "179"
             },
@@ -97,17 +97,17 @@
                 "pris": "188"
             },
             {
-                "namn": "Traditionell \"gazpacho\" på en isbädd.",
+                "namn": "Traditionell 'gazpacho' på en isbädd.",
                 "allergier": "Fråga personalen om allergier.",
                 "pris": "64"
             },
             {
-                "namn": "Murciansk \"zarangollo\" (ägg med grönsaker).",
+                "namn": "Murciansk 'zarangollo' (ägg med grönsaker).",
                 "allergier": "Ägg.",
                 "pris": "138"
             },
             {
-                "namn": "Traditionell \"pisto\" (spansk ratatouille) med stekta ägg.",
+                "namn": "Traditionell 'pisto' (spansk ratatouille) med stekta ägg.",
                 "allergier": "Ägg.",
                 "pris": "138"
             },
@@ -167,7 +167,7 @@
                     "pris": "173"
                 },
                 {
-                    "namn": "\"Arroz a banda\" (ris med skaldjur och fisk vid sidan).",
+                    "namn": "'Arroz a banda' (ris med skaldjur och fisk vid sidan).",
                     "allergier": "Kräftdjur/Fisk.",
                     "pris": "207"
                 },
@@ -189,7 +189,7 @@
                     "pris": "334"
                 },
                 {
-                    "namn": "Skivor av iberisk \"secreto\" (fläsk) med småpotatis och paprika.",
+                    "namn": "Skivor av iberisk 'secreto' (fläsk) med småpotatis och paprika.",
                     "allergier": "Fråga personalen om allergier.",
                     "pris": "230"
                 }, 
@@ -199,7 +199,7 @@
                     "pris": "207"
                 }, 
                 {
-                    "namn": "\"Chuletón\" (kotlett) av Murciansk \"Chato\" gris med grillad potatis och piquillo-paprika.",
+                    "namn": "'Chuletón' (kotlett) av Murciansk \"Chato\" gris med grillad potatis och piquillo-paprika.",
                     "allergier": "Fråga personalen om allergier.",
                     "pris": "253"
                 },
@@ -209,7 +209,7 @@
                     "pris": "276"
                 },
                 {
-                    "namn": "Varierad köttgrill med Padrón-paprika och \"a lo pobre\" potatis.",
+                    "namn": "Varierad köttgrill med Padrón-paprika och 'a lo pobre' potatis.",
                     "allergier": "Fråga personalen om allergier.",
                     "pris": "173"
                 }
@@ -217,7 +217,7 @@
         },
         "desserts": [
             {
-                "namn": "Friterad mjölk, \"paparajote\" (citronblad med deg) och nougatglass.",
+                "namn": "Friterad mjölk, 'paparajote' (citronblad med deg) och nougatglass.",
                 "allergier": "Mjölk/Gluten/Nötter/Sulfiter/Ägg.",
                 "pris": "81"
             },
@@ -227,7 +227,7 @@
                 "pris": "92"
             },
             {
-                "namn": "\"Asiático\" tiramisu (kaffedrink).",
+                "namn": "'Asiático' tiramisu (kaffedrink).",
                 "allergier": "Laktos/Gluten/Ägg/Sulfiter.",
                 "pris": "75"
             },
@@ -252,17 +252,17 @@
                 "pris": "75"
             },
             {
-                "namn": "\"Paparajote\" (citronblad med deg).",
+                "namn": "'Paparajote' (citronblad med deg).",
                 "allergier": "Ägg/Laktos/Gluten.",
                 "pris": "22"
             },
             {
-                "namn": "Vårt traditionella \"pan de calatrava\" (brödpudding).",
+                "namn": "Vårt traditionella 'pan de calatrava' (brödpudding).",
                 "allergier": "Laktos/Gluten/Ägg.",
                 "pris": "69"
             },
             {
-                "namn": "\"Natillas de la huerta\" (vaniljkräm).",
+                "namn": "'Natillas de la huerta' (vaniljkräm).",
                 "allergier": "Laktos/Sulfiter/Gluten.",
                 "pris": "64"
             }

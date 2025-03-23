@@ -1,12 +1,19 @@
+:root {
+  --headers-font: "Montserrat", sans-serif;
+  --text-font: "Raleway", sans-serif;
+}
+
 /* –––––––– Navbar –––––––––––––– */
 .header{
   width: 100%;
   background-color: transparent;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); 
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
   position: sticky;
   top: 0;
   z-index: 100;
+  font-family: var(--headers-font);
 }
 
 .nav-container {
@@ -95,6 +102,7 @@
 /* ––––––––– Footer ––––––––––––– */
 
 footer {
+  font-family: var(--text-font);
   color: #333;
   background-color: transparent;
   backdrop-filter: blur(10px);
@@ -118,6 +126,7 @@ footer {
 }
 
 footer h4 {
+  font-family: var(--headers-font);
   padding-bottom: 0.6em;
   font-size: 1.2em;
   margin-top: 0;
@@ -357,9 +366,3 @@ footer h4 {
     background-color: #888;
   }
 }
-
-
-/* Notes:
-– Animación depegar nav-list en @media query
-– Keep working in light/dark theme selector
-/*  */

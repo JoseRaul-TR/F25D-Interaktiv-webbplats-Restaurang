@@ -1,0 +1,29 @@
+Interaktiv-Webbplats/
+│
+├── index.html
+├── HTML/
+│   └── contact.html
+│   └──lunchbuffe.html
+│   └──menu.html
+│   └──order.html
+├── CSS/
+│   └── contact.css
+│   └── index.css
+│   └── lunchbuffe.css
+│   └── menu.css
+│   └── navbar-footer-styles.css
+│   └── order.css
+├── JS/
+│   └── contact.js
+│   └── lunchbuffe-logic.js
+│   └── menu-logic.js
+│   └── navbar-script.js
+│   └── order.js
+├── media/
+│   └── arruinado.jpeg
+│   └── Barraca.jpeg
+│   └── Maldonado.jpeg
+└── JSON/
+│   └── Lunchbuffe.json
+    └── Meny.json
+
