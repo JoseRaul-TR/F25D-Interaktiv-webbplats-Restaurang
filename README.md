@@ -4,8 +4,6 @@ This is a simulated website for a restaurant, designed to provide an interactive
 
 The menu and the lunch weekly menu are stored in two differents JSON files, with the purpose of easier mantenience. 
 
-![Project Screenshot](./Restaurant-screenshot.png)
-
 **Key Features:**
 
 - Light / Dark Theme
