@@ -98,8 +98,8 @@ To run this interactive restaurant website locally:
 
 ## Contact
 
--   **Email:** [Your Email Address] (Replace with your actual email)
--   **GitHub:** [Your GitHub Profile URL](https://github.com/JoseRaul-TR)
+-   **LinkedIn:** (https://www.linkedin.com/in/joseraultenza/)
+-   **GitHub:** (https://github.com/JoseRaul-TR)
 
 ---
 
