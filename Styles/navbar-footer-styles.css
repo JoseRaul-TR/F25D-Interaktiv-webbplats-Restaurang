@@ -1,9 +1,3 @@
-:root {
-  --headers-font: "Montserrat", sans-serif;
-  --text-font: "Raleway", sans-serif;
-}
-
-/* –––––––– Navbar –––––––––––––– */
 .header{
   width: 100%;
   background-color: transparent;

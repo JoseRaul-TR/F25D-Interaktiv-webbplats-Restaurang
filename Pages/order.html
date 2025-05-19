@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../Styles/base.css" />
+    <link rel="stylesheet" href="../Styles/order.css" />
+    <link rel="stylesheet" href="../Styles/navbar-footer-styles.css" />
+
+    <script src="../JS/order.js" defer></script>
+    <script src="../JS/navbar-script.js" defer></script>
+
+    <title>Entre Limones | Beställning</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-container">
+          <a href="../index.html" class="nav-brand">
+            <h1>🍋 Entre Limones 🍋</h1>
+            <!-- Place for restaurant's logo -->
+          </a>
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="../Pages/menu.html" class="nav-link">
+                <i class="fas fa-book-open"></i>A la carte
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./lunchbuffe.html" class="nav-link">
+                <i class="fas fa-concierge-bell"></i>Lunchbuffé
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./order.html" class="nav-link">
+                <i class="fas fa-truck"></i>Beställning
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./contact.html" class="nav-link">
+                <i class="fas fa-envelope"></i>Kontakt
+              </a>
+            </li>
+          </ul>
+          <button class="nav-toggle">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="order-container">
+        <h2>Beställa</h2>
+        <p>
+          Här kan du beställa rätter från vår meny för att hämta själv eller
+          levereras hem till dig.
+        </p>
+
+        <form id="orderForm">
+          <div class="dish-selection-container">
+            <div class="dish-group" data-category="starter">
+              <label for="starterSelect">Förrätter:</label>
+              <select id="starterSelect" name="starter"></select>
+              <label for="starterQuantity">Antal:</label>
+              <input
+                type="number"
+                id="starterQuantity"
+                name="starterQuantity"
+                value="0"
+              />
+              <button type="button" class="addItem">Lägg till</button>
+            </div>
+            <div class="dish-group" data-category="mainDish">
+              <label for="mainDishSelect">Varmrätter:</label>
+              <select id="mainDishSelect" name="mainDish"></select>
+              <label for="mainDishQuantity">Antal:</label>
+              <input
+                type="number"
+                id="mainDishQuantity"
+                name="mainDishQuantity"
+                value="0"
+              />
+              <button type="button" class="addItem">Lägg till</button>
+            </div>
+            <div class="dish-group" data-category="dessert">
+              <label for="dessertSelect">Efterrätter:</label>
+              <select id="dessertSelect" name="dessert"></select>
+              <label for="dessertQuantity">Antal:</label>
+              <input
+                type="number"
+                id="dessertQuantity"
+                name="dessertQuantity"
+                value="0"
+              />
+              <button type="button" class="addItem">Lägg till</button>
+            </div>
+            <div class="dish-group" data-category="drink">
+              <label for="drinkSelect">Dryckar:</label>
+              <select id="drinkSelect" name="drink"></select>
+              <label for="drinkQuantity">Antal:</label>
+              <input
+                type="number"
+                id="drinkQuantity"
+                name="drinkQuantity"
+                value="0"
+              />
+              <button type="button" class="addItem">Lägg till</button>
+            </div>
+          </div>
+
+          <div class="client-input-container">
+            <div class="name-container">
+              <label for="name">Namn:</label>
+              <input type="text" id="name" name="name" />
+            </div>
+            <div class="name-container">
+              <label for="phone">Telefonnummer:</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+            <div class="name-container">
+              <label for="email">E-postadress:</label>
+              <input type="email" id="email" name="email" />
+            </div>
+          </div>
+
+          <div id="totalPriceDisplay">
+            <strong>Din beställning:</strong>
+            <ul id="orderItems"></ul>
+            <strong>Totalpriset är:</strong> <span id="totalPrice">0</span> kr
+          </div>
+
+          <button type="submit">Beställa</button>
+        </form>
+        <div id="orderConfirmation" style="display: none">
+          <p>Din beställning har lagts!</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-columns-container">
+        <div class="footer-column-1">
+          <h4>Sidokarta</h4>
+          <ul class="footer-sitemap">
+            <li><a href="../index.html">Hem</a></li>
+            <li><a href="./menu.html">A la carte</a></li>
+            <li><a href="./lunchbuffe.html">Lunchbuffé</a></li>
+            <li><a href="./order.html">Beställning</a></li>
+            <li><a href="./contact.html">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column-2">
+          <div class="footer-social">
+            <a href="../index.html"><h4>Restaurang Entre Limones</h4></a>
+            <div class="social-icons">
+              <a href="https://www.facebook.com" target="_blank"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="https://www.instagram.com" target="_blank"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="https://www.x.com" target="_blank"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-oppening-hours">
+            <h4>Öppettider</h4>
+            <p>Måndag - Fredag: 11:30 - 22:00</p>
+            <p>Lördag: 12:00 - 23:00</p>
+            <p>Söndag: 12:30 – 21:30</p>
+          </div>
+        </div>
+
+        <div class="footer-column-3">
+          <h4>Kontakt</h4>
+          <address>
+            <i class="fas fa-map-marker-alt"></i>Restaurang Entre Limones<br />
+            Gatuadress 123<br />
+            123 45 Stad<br />
+          </address>
+          <p>
+            <a href="tel:+46123456789"
+              ><i class="fas fa-phone"></i>012-345 67 89</a
+            >
+          </p>
+          <p>
+            <a href="mailto:email@example.com"
+              ><i class="fas fa-envelope"></i>email@example.com</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="copyright-container">
+        <p>
+          &copy; <span id="copyright-year"></span> – José Raúl Tenza Ramírez<br />All
+          rights reserved
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

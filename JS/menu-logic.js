@@ -30,7 +30,7 @@ filterButtons.forEach(button => {
 // Async function to load the menu from a JSON file
 async function loadMenu() {
     try {
-        const response = await fetch('../JSON/Meny.json');
+        const response = await fetch('../Data/Meny.json');
         const data = await response.json();
 
         const startersList = document.getElementById('starters-list');

@@ -10,7 +10,7 @@ toggleMenuBtn.addEventListener('click', () => {
 //Logic to load the weekly menu from a JSON file
 async function fetchLunchData() {
     try {
-        const response = await fetch('../JSON/Lunchbuffe.json'); // Fetch the data from JSON Lunchbuffe
+        const response = await fetch('../Data/Lunchbuffe.json'); // Fetch the data from JSON Lunchbuffe
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }

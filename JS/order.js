@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Define IDs for select elements for different dish categories
+    // Define IDs for select elements
     const selects = {
         starter: 'starterSelect',
         mainDish: 'mainDishSelect',
         dessert: 'dessertSelect',
-        drink: 'drinkSelect' 
+        drink: 'drinkSelect'
     };
 
-    // Define IDs for quantity input elements for different dish categories
+    // Define IDs for quantity input elements
     const quantities = {
         starter: 'starterQuantity',
         mainDish: 'mainDishQuantity',
@@ -24,6 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Array to store ordered items
     let orderItems = [];
 
+    // Variable to store the fetched menu data
+    let menuData = null;
+
     // Helper function to get an element by its ID
     const getElement = id => document.getElementById(id);
 
@@ -33,100 +36,113 @@ document.addEventListener('DOMContentLoaded', () => {
     // Helper function to fetch and parse JSON data from a URL
     const fetchJson = async (url) => (await (await fetch(url)).json());
 
-    // Helper function to get the price of a dish from a list of dishes, handling encoded quotes
+    // Helper function to get the price of a dish
     const getPrice = (dishes, dishName) => dishes?.find(d => d.namn.replace(/"/g, '&quot;') === dishName.replace(/"/g, '&quot;'))?.pris;
 
     // Function to populate a select element with dish options
     const populateSelect = (selectId, dishes) => {
         const select = getElement(selectId);
-        if (!dishes) return; // Exit if no dishes are provided
+        if (!dishes) return;
         select.innerHTML = dishes.filter(dish => dish.pris !== null && dish.pris !== undefined).map(dish => {
-            const encodedName = dish.namn.replace(/"/g, '&quot;'); // Encode dish names with quotes
-            return `<option value="${encodedName}">${dish.namn} - ${dish.pris} kr</option>`; // Create option element
+            const encodedName = dish.namn.replace(/"/g, '&quot;');
+            return `<option value="${encodedName}">${dish.namn} - ${dish.pris} kr</option>`;
         }).join('');
     };
 
-    // Function to populate the main dish select element with options from subcategories
+    // Function to populate the main dish select element
     const populateMainDishes = (selectId, mainDishes) => {
-        if (!mainDishes) return; // Exit if no main dishes are provided
-        const allMainDishes = Object.values(mainDishes).flatMap(arr => arr || []); // Combine main dish subcategories
-        populateSelect(selectId, allMainDishes); // Populate select with combined dishes
+        if (!mainDishes) return;
+        const allMainDishes = Object.values(mainDishes).flatMap(arr => arr || []);
+        populateSelect(selectId, allMainDishes);
     };
 
     // Function to update the total price display
-    const updateTotalPrice = async () => {
-        try {
-            const data = await fetchJson('../JSON/Meny.json'); // Fetch menu data
-            const totalPrice = orderItems.reduce((sum, item) => {
-                const dishes = data.menu[item.category === 'mainDish' ? 'main-dish' : item.category + 's']; // Get dishes for the category
-                const dishPrice = getPrice(item.category === 'mainDish' ? Object.values(dishes).flatMap(arr => arr || []) : dishes, item.dish) || 0; // Get dish price
-                return sum + dishPrice * item.quantity; // Calculate and add to total
-            }, 0);
-            getElement(totalPriceDisplay).textContent = totalPrice; // Update display
-        } catch (error) { console.error('Error updating total price:', error); }
+    const updateTotalPrice = () => {
+        if (!menuData) return;
+        const totalPrice = orderItems.reduce((sum, item) => {
+            const dishes = menuData.menu[item.category === 'mainDish' ? 'main-dish' : item.category + 's'];
+            const dishPrice = getPrice(item.category === 'mainDish' ? Object.values(dishes).flatMap(arr => arr || []) : dishes, item.dish) || 0;
+            return sum + dishPrice * item.quantity;
+        }, 0);
+        getElement(totalPriceDisplay).textContent = totalPrice;
     };
 
     // Function to update the order items display
-    const updateOrderDisplay = async () => {
-        try {
-            const data = await fetchJson('../JSON/Meny.json'); // Fetch menu data
-            getElement(orderItemsList).innerHTML = orderItems.map(item => {
-                const dishes = data.menu[item.category === 'mainDish' ? 'main-dish' : item.category + 's']; // Get dishes for the category
-                const dishPrice = getPrice(item.category === 'mainDish' ? Object.values(dishes).flatMap(arr => arr || []) : dishes, item.dish) || 0; // Get dish price
-                const subtotal = dishPrice * item.quantity; // Calculate subtotal
-                return `<li>${item.dish} x ${item.quantity} - ${subtotal} kr</li>`; // Create list item with subtotal
-            }).join('');
-        } catch (error) { console.error('Error updating order display:', error); }
+    const updateOrderDisplay = () => {
+        if (!menuData) return;
+        getElement(orderItemsList).innerHTML = orderItems.map(item => {
+            const dishes = menuData.menu[item.category === 'mainDish' ? 'main-dish' : item.category + 's'];
+            const dishPrice = getPrice(item.category === 'mainDish' ? Object.values(dishes).flatMap(arr => arr || []) : dishes, item.dish) || 0;
+            const subtotal = dishPrice * item.quantity;
+            return `<li>${item.dish} x ${item.quantity} - ${subtotal} kr</li>`;
+        }).join('');
     };
 
     // Function to add event listeners for adding items to the order
-    const addAddItemListeners = async () => {
+    const addAddItemListeners = () => {
         getElements('.dish-group').forEach(group => {
-            group.querySelector('.addItem').addEventListener('click', async () => {
-                const category = group.dataset.category; // Get category from data attribute
-                const dish = getElement(selects[category]).value; // Get selected dish
-                const quantity = getElement(quantities[category]).value; // Get quantity
+            group.querySelector('.addItem').addEventListener('click', () => {
+                if (!menuData) return;
+                const category = group.dataset.category;
+                const dish = getElement(selects[category]).value;
+                const quantity = getElement(quantities[category]).value;
                 if (dish && quantity > 0) {
-                    try {
-                        const data = await fetchJson('../JSON/Meny.json'); // Fetch menu data
-                        const dishes = data.menu[category === 'mainDish' ? 'main-dish' : category + 's']; // Get dishes for the category
-                        const dishPrice = getPrice(category === 'mainDish' ? Object.values(dishes).flatMap(arr => arr || []) : dishes, dish); // Get dish price
-                        if (dishPrice !== null && dishPrice !== undefined) {
-                            orderItems.push({ category, dish, quantity }); // Add item to order
-                            updateOrderDisplay(); // Update order display
-                            updateTotalPrice(); // Update total price
-                        } else { console.warn(`Dish "${dish}" has no valid price and was not added.`); }
-                    } catch (error) { console.error('Error adding item:', error); }
+                    const dishes = menuData.menu[category === 'mainDish' ? 'main-dish' : category + 's'];
+                    const dishPrice = getPrice(category === 'mainDish' ? Object.values(dishes).flatMap(arr => arr || []) : dishes, dish);
+                    if (dishPrice !== null && dishPrice !== undefined) {
+                        orderItems.push({ category, dish, quantity });
+                        updateOrderDisplay();
+                        updateTotalPrice();
+                    } else {
+                        console.warn(`Dish "${dish}" has no valid price and was not added.`);
+                    }
                 }
             });
         });
     };
 
-    // Function to load menu data and setup event listeners
-    const loadMenu = async () => {
+    // Main function to fetch menu data and then setup the page
+    const fetchData = async () => {
         try {
-            const data = await fetchJson('../JSON/Meny.json'); // Fetch menu data
-            populateSelect(selects.starter, data.menu.starters); // Populate starters select
-            populateMainDishes(selects.mainDish, data.menu['main-dish']); // Populate main dishes select
-            populateSelect(selects.dessert, data.menu.desserts); // Populate desserts select
-            populateSelect(selects.drink, data.menu.drinks); // Populate drinks select
-            Object.values(selects).forEach(selectId => getElement(selectId).addEventListener('change', updateTotalPrice)); // Add change listeners to selects
-            Object.values(quantities).forEach(quantityId => getElement(quantityId).addEventListener('input', updateTotalPrice)); // Add input listeners to quantities
-            addAddItemListeners(); // Add add item listeners
-        } catch (error) { console.error('Error loading menu:', error); }
+            menuData = await fetchJson('../Data/Meny.json'); // Fetch menu data first
+
+            populateSelect(selects.starter, menuData.menu.starters);
+            populateMainDishes(selects.mainDish, menuData.menu['main-dish']);
+            populateSelect(selects.dessert, menuData.menu.desserts);
+            populateSelect(selects.drink, menuData.menu.drinks);
+
+            Object.values(selects).forEach(selectId => getElement(selectId).addEventListener('change', updateTotalPrice));
+            Object.values(quantities).forEach(quantityId => getElement(quantityId).addEventListener('input', updateTotalPrice));
+
+            addAddItemListeners();
+
+        } catch (error) {
+            console.error('Error initializing app:', error);
+        }
     };
 
-    loadMenu(); // Load menu data on page load
+    fetchData(); // Start the initialization process
 
     // Event listener for form submission
     getElement(orderForm).addEventListener('submit', (event) => {
-        event.preventDefault(); // Prevent default form submission
-        const name = getElement('name').value, phone = getElement('phone').value, email = getElement('email').value; // Get form values
-        if (!name) { alert('Ange ditt namn.'); return; } // Validate name
-        if (!phone && !email) { alert('Ange ditt telefonnummer eller e-post.'); return; } // Validate phone or email
-        if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('Ogiltig e-postadress.'); return; } // Validate email format
-        console.log('Order:', { items: orderItems, name, phone, email }); // Log order
-        getElement(orderForm).style.display = 'none'; // Hide form
-        getElement(orderConfirmation).style.display = 'block'; // Show confirmation
+        event.preventDefault();
+        const name = getElement('name').value;
+        const phone = getElement('phone').value;
+        const email = getElement('email').value;
+        if (!name) {
+            alert('Ange ditt namn.');
+            return;
+        }
+        if (!phone && !email) {
+            alert('Ange ditt telefonnummer eller e-post.');
+            return;
+        }
+        if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            alert('Ogiltig e-postadress.');
+            return;
+        }
+        console.log('Order:', { items: orderItems, name, phone, email });
+        getElement(orderForm).style.display = 'none';
+        getElement(orderConfirmation).style.display = 'block';
     });
 });

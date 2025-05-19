@@ -9,10 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../CSS/contact.css">
-    <link rel="stylesheet" href="../CSS/navbar-footer-styles.css">
+    <link rel="stylesheet" href="../Styles/base.css" />
+    <link rel="stylesheet" href="../Styles/lunchbuffe.css" />
+    <link rel="stylesheet" href="../Styles/navbar-footer-styles.css" />
 
-    <script src="../JS/contact.js" defer></script>
+    <script src="../JS/lunchbuffe-logic.js" defer></script>
     <script src="../JS/navbar-script.js" defer></script>
 
     <title>Restaurang Entre Limones</title>
@@ -29,22 +30,22 @@
                 </a>
                 <ul class="nav-menu">
                     <li class="nav-item">
-                        <a href="../HTML/menu.html" class="nav-link">
+                        <a href="../Pages/menu.html" class="nav-link">
                             <i class="fas fa-book-open"></i>A la carte 
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="../HTML/lunchbuffe.html" class="nav-link">
+                        <a href="../Pages/lunchbuffe.html" class="nav-link">
                             <i class="fas fa-concierge-bell"></i>Lunchbuffé
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="../HTML/order.html" class="nav-link">
+                        <a href="../Pages/order.html" class="nav-link">
                             <i class="fas fa-truck"></i>Beställning
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="../HTML/contact.html" class="nav-link">
+                        <a href="../Pages/contact.html" class="nav-link">
                             <i class="fas fa-envelope"></i>Kontakt
                         </a>
                     </li>
@@ -60,48 +61,32 @@
 
     <main>
 
-        <section class="contact-form">
-            <h2>Kontakta oss</h2>
+        <section id="lunchbuffet">
 
-            <div class="contact-container">
-                <div class="contact-details">
-                    <div class="address-info">
-                        <h3>Restaurang Entre Limones</h3>
-                        <p>Gatuadress 123</p>
-                        <p>123 45 Stad</p>
-                        <p><a href="tel:+46123456789"><i class="fas fa-phone"></i>012-345 67 89</a></p>
-                        <p><a href="mailto:email@example.com"><i class="fas fa-envelope"></i>email@example.com</a></p>
-                    </div>
-                    <div class="oppening-hours">
-                        <h3>Öppettider</h3>
-                        <p>Måndag - Fredag: 11:30 - 22:00</p>
-                        <p>Lördag: 12:00 - 23:00</p>
-                        <p>Söndag: 12:30 – 21:30</p>
-                    </div>
-                </div>
+            <h2>Lunchbuffé</h2>
+            <p>Njut av vår varierade lunchbuffé med färska och läckra alternativ att välja på.</p>
+        
+            <h3>Tillgänglighet</h3>
+            <p>Måndag - Fredag: <span id="weekday-hours"></span></p>
+            <p>Söndag: <span id="sunday-hours"></span></p>
 
-                <form id="contactForm" onsubmit="return validateForm()">
-                    <div class="form-group">
-                        <label for="name">Namn:</label>
-                        <input type="text" id="name" name="name">
-                        <div id="nameError" class="error-message"></div>
-                    </div>
+            <button id="toggle-menu-btn">Visa veckans menyn</button>
 
-                    <div class="form-group">
-                        <label for="email">E-postadress:</label>
-                        <input type="email" id="email" name="email">
-                        <div id="emailError" class="error-message"></div>
-                    </div>
+            <div class="weekly-menu">
+                <h3>Veckans meny (vecka <span id="week-number"></span>)</h3>
+                <ul id="weekly-menu-list"></ul>
 
-                    <div class="form-group">
-                        <label for="message">Meddelande:</label>
-                        <textarea type="message" id="message" name="message"></textarea>
-                        <div id="messageError" class="error-message"></div>
-                    </div>
-
-                    <button type="submit" class="submit-btn">Skicka meddelande</button>
-                </form>
+                <h3>Drycker</h3>
+                <p><strong>Inkluderad: </strong><span id="included-drinks"></span></p>
+                <p>
+                    <strong>Mot tillägg: </strong>
+                    <ul id="supplement-drinks"></ul>
+                </p>
+            
+                <h3>Pris</h3>
+                <p><span id="price"></span> kr</p>
             </div>
+            
 
         </section>
 
@@ -155,9 +140,8 @@
         <div class="copyright-container">
             <p>&copy; <span id="copyright-year"></span> – José Raúl Tenza Ramírez<br>All rights reserved</p>
         </div>
+        
     </footer>
 
 </body>
 </html>
-
-<!-- - Add adress, phone, email and oppening hours details to main container  -->

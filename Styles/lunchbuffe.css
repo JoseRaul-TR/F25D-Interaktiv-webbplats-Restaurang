@@ -1,14 +1,3 @@
-:root {
-    --headers-font: "Montserrat", sans-serif;
-    --text-font: "Raleway", sans-serif;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
     font-family: var(--text-font);
     line-height: 1.6;
